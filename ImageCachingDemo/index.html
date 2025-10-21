@@ -1,17 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pokémon Image Cache Demo</title>
+    <meta charset="UTF-8">
+    <title>Pokémon Image Cache Demo</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #ff1c1c;
+            text-shadow: 1px 1px 2px #aaa;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        /* Input and buttons */
+        input[type="number"] {
+            padding: 8px 12px;
+            font-size: 1em;
+            width: 100px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 16px;
+            font-size: 1em;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            transition: background 0.3s;
+        }
+
+        #load-btn {
+            background-color: #007bff;
+        }
+
+        #load-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #cache-all-btn {
+            background-color: #28a745;
+        }
+
+        #cache-all-btn:hover {
+            background-color: #1e7e34;
+        }
+
+        /* Progress bar */
+        progress {
+            width: 300px;
+            height: 20px;
+            appearance: none;
+            -webkit-appearance: none;
+            margin-right: 10px;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: #eee;
+            border-radius: 10px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+
+        #eta {
+            font-weight: bold;
+            font-size: 1em;
+            vertical-align: middle;
+        }
+
+        /* Pokémon image */
+        #pokemon-img {
+            margin-top: 20px;
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            max-width: 300px;
+        }
+
+        /* Responsive for small screens */
+        @media (max-width: 400px) {
+            input[type="number"] {
+                width: 80px;
+            }
+
+            progress {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Pokémon Image Cache Demo</h1>
-  <p>Enter a Pokédex number and the image will load (even offline if cached):</p>
-  <input type="number" id="pokedex-number" placeholder="e.g., 197" min="1">
-  <button id="load-btn">Load Pokémon</button>
-  <br><br>
-  <img id="pokemon-img" alt="Pokémon" width="300">
+    <h1>Pokémon Image Cache Demo</h1>
+    <p>Enter a Pokédex number and the image will load (even offline if cached):</p>
+
+    <input type="number" id="pokedex-number" placeholder="e.g., 197" min="1" max="1025">
+    <button id="load-btn">Load Pokémon</button>
+    <button id="cache-all-btn">Cache All Pokémon</button>
+
+    <br><br>
+    <progress id="progress-bar" value="0" max="1025"></progress>
+    <span id="eta">ETA: -- sec</span>
+
+    <br><br>
+    <img id="pokemon-img" alt="Pokémon" width="300">
   
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
