@@ -33,6 +33,13 @@ async function cacheAllPokemon() {
   const progressBar = document.getElementById('progress-bar');
   const etaDisplay = document.getElementById('eta');
 
+  // Show ETA when caching starts
+  etaDisplay.style.display = 'inline';
+  progressBar.value = 0;
+
+  // Force browser to repaint the ETA span
+  await new Promise(requestAnimationFrame);
+
   let totalFetchTime = 0; // sum of fetch times
   const startTime = Date.now();
 
@@ -67,10 +74,14 @@ async function cacheAllPokemon() {
 
   const totalTime = ((Date.now() - startTime) / 1000).toFixed(1);
   progressBar.value = TOTAL_POKEMON;
-  etaDisplay.textContent = `ETA: 0 sec`;
+
+  // Hide ETA after caching completes
+  etaDisplay.style.display = 'none';
+
   console.log(`All Pokémon images cached in ${totalTime} seconds!`);
   alert('All Pokémon images are cached!');
 }
+
 
 // Event listeners
 const inputField = document.getElementById('pokedex-number');
