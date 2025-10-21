@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>PNG → QOI (browser)</title>
+<style>
+  :root{--bg:#0f1720;--card:#0b1220;--muted:#9aa4b2;--accent:#7dd3fc}
+  html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef6;background:linear-gradient(180deg,#051022 0%, #072033 100%);}
+  .wrap{max-width:980px;margin:36px auto;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+  h1{margin:0 0 6px;font-size:20px}
+  p.lead{margin:0 0 18px;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+  .card{background:var(--card);border-radius:10px;padding:14px}
+  #drop{border:2px dashed rgba(125,211,252,0.12);border-radius:8px;padding:18px;text-align:center;color:var(--muted);cursor:pointer}
+  #drop.dragover{border-color:rgba(125,211,252,0.5);background:rgba(125,211,252,0.02)}
+  input[type=file]{display:none}
+  button,select{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:#dff6ff;cursor:pointer}
+  button.primary{background:var(--accent);color:#022; border:none}
+  .row{display:flex;gap:8px;align-items:center}
+  img.preview{max-width:100%;border-radius:8px;display:block;margin:8px 0}
+  .info{font-size:13px;color:var(--muted);margin-top:6px}
+  .download-link{display:inline-block;margin-top:10px;padding:8px 10px;border-radius:8px;background:#052b35;color:var(--accent);text-decoration:none;border:1px solid rgba(125,211,252,0.25)}
+  footer{margin-top:14px;color:var(--muted);font-size:13px}
+  progress{width:100%;height:10px;border-radius:6px}
+  small.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,monospace;font-size:13px;color:#bfefff}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>PNG → QOI (client-side)</h1>
+  <p class="lead">Drop a PNG (or any image) below, then click <strong>Convert</strong> to get a QOI file — all in your browser.</p>
+
+  <div class="grid">
+    <div>
+      <div class="card">
+        <label id="drop" for="fileInput">
+          <input id="fileInput" type="file" accept="image/*">
+          <div id="dropLabel">Click or drag & drop an image here</div>
+          <div id="dropSub" class="info">PNG, JPEG, GIF (frames ignored), WebP — browser-decoded images work.</div>
+        </label>
+
+        <div style="margin-top:12px" id="previewArea" hidden>
+          <div class="row" style="justify-content:space-between;align-items:center">
+            <div>
+              <strong id="fileName">—</strong>
+              <div class="info" id="fileMeta">—</div>
+            </div>
+            <div class="row">
+              <label title="Channels">Channels:</label>
+              <select id="channelsSelect" aria-label="channels">
+                <option value="4">RGBA (keep alpha)</option>
+                <option value="3">RGB (drop alpha)</option>
+              </select>
+            </div>
+          </div>
+
+          <img id="previewImg" class="preview" alt="preview" />
+          <canvas id="hiddenCanvas" style="display:none"></canvas>
+
+          <div style="margin-top:8px" class="row">
+            <button id="convertBtn" class="primary">Convert to QOI</button>
+            <button id="revertBtn">Choose another</button>
+          </div>
+
+          <div style="margin-top:10px" id="progressWrap" hidden>
+            <progress id="progressBar" value="0" max="100"></progress>
+            <div class="info" id="progressText">Preparing…</div>
+          </div>
+
+          <div id="downloadWrap" style="margin-top:12px;display:none">
+            <a id="downloadLink" class="download-link" download>Download .qoi</a>
+            <div class="info" id="sizeInfo"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        <div>QOI spec followed: header (14 bytes) + data chunks + 8-byte end marker. See <small class="mono">qoiformat.org</small> for the official spec.</div>
+      </footer>
+    </div>
+
+    <div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">How it works</h3>
+        <ol style="margin:0 0 8px 18px;color:var(--muted)">
+          <li>Browser decodes the PNG into RGBA via canvas.</li>
+          <li>Encoder walks pixels left-to-right, top-to-bottom and writes QOI opcodes.</li>
+          <li>Produces `.qoi` file for download.</li>
+        </ol>
+        <div class="info">Notes: QOI channels/colorspace header fields are informational only. This page encodes using <strong>sRGB</strong> colorspace value <code class="mono">0</code>.</div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h4 style="margin:0 0 8px">Developer / debug</h4>
+        <div class="info">
+          <div><strong>Last action:</strong> <span id="debugAction">idle</span></div>
+          <div style="margin-top:8px"><strong>Output bytes preview:</strong></div>
+          <pre id="debugBytes" style="max-height:200px;overflow:auto;margin:6px 0;padding:8px;background:#001220;border-radius:6px;color:#bfefff;font-size:12px"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/*
+ QOI encoder in JS (browser). Follows the QOI spec:
+  - header: 4 bytes "qoif", width BE u32, height BE u32, channels u8, colorspace u8
+  - data chunks: QOI_OP_INDEX, QOI_OP_DIFF, QOI_OP_LUMA, QOI_OP_RUN, QOI_OP_RGB(0xFE), QOI_OP_RGBA(0xFF)
+  - end marker: 7x0x00 then 0x01
+*/
+
+const fileInput = document.getElementById('fileInput');
+const drop = document.getElementById('drop');
+const dropLabel = document.getElementById('dropLabel');
+const previewArea = document.getElementById('previewArea');
+const previewImg = document.getElementById('previewImg');
+const fileNameEl = document.getElementById('fileName');
+const fileMetaEl = document.getElementById('fileMeta');
+const convertBtn = document.getElementById('convertBtn');
+const revertBtn = document.getElementById('revertBtn');
+const channelsSelect = document.getElementById('channelsSelect');
+const hiddenCanvas = document.getElementById('hiddenCanvas');
+const progressWrap = document.getElementById('progressWrap');
+const progressBar = document.getElementById('progressBar');
+const progressText = document.getElementById('progressText');
+const downloadWrap = document.getElementById('downloadWrap');
+const downloadLink = document.getElementById('downloadLink');
+const sizeInfo = document.getElementById('sizeInfo');
+const debugAction = document.getElementById('debugAction');
+const debugBytes = document.getElementById('debugBytes');
+
+let loadedImage = null;
+let loadedFile = null;
+
+function setDebug(action, bytes) {
+  debugAction.textContent = action;
+  if (bytes !== undefined) {
+    // show first 200 bytes hex
+    const caps = bytes.slice(0, 200).map(b => b.toString(16).padStart(2,'0')).join(' ');
+    debugBytes.textContent = caps + (bytes.length > 200 ? ' …' : '');
+  }
+}
+
+function resetUI() {
+  previewArea.hidden = true;
+  downloadWrap.style.display = 'none';
+  progressWrap.hidden = true;
+  previewImg.src = '';
+  fileNameEl.textContent = '—';
+  fileMetaEl.textContent = '—';
+  setDebug('idle', new Uint8Array([]));
+}
+
+// Drag & drop behavior
+;['dragenter','dragover'].forEach(ev=>{
+  drop.addEventListener(ev, (e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+    drop.classList.add('dragover');
+  });
+});
+;['dragleave','dragend','drop'].forEach(ev=>{
+  drop.addEventListener(ev, (e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+    drop.classList.remove('dragover');
+  });
+});
+// handle drop
+drop.addEventListener('drop', (e)=>{
+  const f = e.dataTransfer.files && e.dataTransfer.files[0];
+  if (f) fileInput.files = e.dataTransfer.files;
+  handleFileChange();
+});
+
+fileInput.addEventListener('change', handleFileChange);
+
+function handleFileChange() {
+  const f = fileInput.files && fileInput.files[0];
+  if (!f) return resetUI();
+  loadedFile = f;
+  const url = URL.createObjectURL(f);
+  const img = new Image();
+  img.onload = () => {
+    loadedImage = img;
+    previewArea.hidden = false;
+    previewImg.src = url;
+    fileNameEl.textContent = f.name;
+    fileMetaEl.textContent = `${img.width} × ${img.height}, ${Math.round(f.size/1024)} KB`;
+    setDebug('image loaded', new Uint8Array([]));
+  };
+  img.onerror = (err) => {
+    alert('Could not load image — make sure it is a valid image file.');
+    resetUI();
+  };
+  img.src = url;
+}
+
+/* QOI encoder implementation */
+const QOI_OP_RGB  = 0xfe;
+const QOI_OP_RGBA = 0xff;
+const QOI_MASK_2  = 0xc0; // 1100 0000
+
+function writeBE32(arr, offset, value) {
+  arr[offset]   = (value >>> 24) & 0xFF;
+  arr[offset+1] = (value >>> 16) & 0xFF;
+  arr[offset+2] = (value >>> 8) & 0xFF;
+  arr[offset+3] = (value) & 0xFF;
+}
+
+// Hash for index: (r*3 + g*5 + b*7 + a*11) % 64
+function qoiHash(r,g,b,a) {
+  return (r*3 + g*5 + b*7 + a*11) % 64;
+}
+
+// Main encoding function: returns Uint8Array of QOI file.
+function encodeQOI(width, height, channels, colorspace, px) {
+  // px: Uint8ClampedArray length width*height*4 (RGBA from canvas)
+  const pxLen = width * height;
+  // worst-case estimate: header(14) + (pxLen * 5) + 8 end marker
+  // but to avoid repeated reallocs, we can push into a normal array then convert.
+  const out = [];
+  // header
+  out.push('q'.charCodeAt(0), 'o'.charCodeAt(0), 'i'.charCodeAt(0), 'f'.charCodeAt(0));
+  // width big endian
+  const headerPlaceholder = new Array(8).fill(0);
+  // we'll push using writeBE32 afterwards; here we just append 8 zeros for width/height
+  out.push(0,0,0,0, 0,0,0,0);
+  out.push(channels & 0xFF, colorspace & 0xFF);
+
+  // We'll replace the 8 zeros with BE width/height now:
+  // But since out is a plain array, set positions 4..11:
+  const w = width >>> 0;
+  const h = height >>> 0;
+  out[4] = (w >>> 24) & 0xFF;
+  out[5] = (w >>> 16) & 0xFF;
+  out[6] = (w >>> 8) & 0xFF;
+  out[7] = (w) & 0xFF;
+  out[8] = (h >>> 24) & 0xFF;
+  out[9] = (h >>> 16) & 0xFF;
+  out[10] = (h >>> 8) & 0xFF;
+  out[11] = (h) & 0xFF;
+
+  // encoder state
+  const index = new Array(64);
+  for (let i=0;i<64;i++) index[i] = {r:0,g:0,b:0,a:0};
+
+  let prev_r = 0, prev_g = 0, prev_b = 0, prev_a = 255;
+  let run = 0;
+
+  // helper to flush run
+  function flushRun() {
+    if (run > 0) {
+      // QOI_OP_RUN: 0b11xxxxxx where value = run-1 in 6 bits (1..62 maps to 0..61)
+      // allowed run range stored is 1..62; encode as run-1.
+      while (run > 0) {
+        const chunk = Math.min(run, 62);
+        out.push(QOI_MASK_2 | (chunk - 1)); // 0b11000000 | (run-1)
+        run -= chunk;
+      }
+    }
+  }
+
+  // iterate pixels
+  for (let i = 0, pxpos = 0; i < pxLen; i++, pxpos += 4) {
+    const r = px[pxpos + 0];
+    const g = px[pxpos + 1];
+    const b = px[pxpos + 2];
+    const a = px[pxpos + 3];
+
+    if (r === prev_r && g === prev_g && b === prev_b && a === prev_a) {
+      run++;
+      if (run === 62) {
+        flushRun();
+      }
+      continue;
+    }
+
+    if (run > 0) {
+      flushRun();
+      // run reset done inside flushRun
+    }
+
+    const idxPos = qoiHash(r,g,b,a);
+    const idxEntry = index[idxPos];
+
+    if (idxEntry.r === r && idxEntry.g === g && idxEntry.b === b && idxEntry.a === a) {
+      // QOI_OP_INDEX: 00xxxxxx where xxxx is 6-bit index
+      out.push(idxPos & 0x3F);
+    } else {
+      index[idxPos] = {r,g,b,a};
+      // try DIFF
+      const dr = (r - prev_r);
+      const dg = (g - prev_g);
+      const db = (b - prev_b);
+
+      // For QOI_OP_DIFF we need dr,dg,db in -2..+1
+      if (a === prev_a &&
+          dr >= -2 && dr <= 1 &&
+          dg >= -2 && dg <= 1 &&
+          db >= -2 && db <= 1) {
+        // QOI_OP_DIFF: 01 | (dr+2 <<4) | (dg+2 <<2) | (db+2)
+        const packed = 0x40 | ((dr + 2) << 4) | ((dg + 2) << 2) | (db + 2);
+        out.push(packed & 0xFF);
+      } else {
+        // try LUMA: requires dg in -32..31, and dr_dg, db_dg in -8..7
+        const dg_big = dg;
+        const dr_dg = dr - dg;
+        const db_dg = db - dg;
+        if (a === prev_a &&
+            dg_big >= -32 && dg_big <= 31 &&
+            dr_dg >= -8 && dr_dg <= 7 &&
+            db_dg >= -8 && db_dg <= 7) {
+          // QOI_OP_LUMA: 10xxxxxx (6 bits: dg+32) then next byte: ((dr_dg+8)<<4) | (db_dg+8)
+          const b1 = 0x80 | (dg_big + 32);
+          const b2 = ((dr_dg + 8) << 4) | (db_dg + 8);
+          out.push(b1 & 0xFF, b2 & 0xFF);
+        } else {
+          // Use QOI_OP_RGB or QOI_OP_RGBA
+          if (a === prev_a) {
+            out.push(QOI_OP_RGB, r & 0xFF, g & 0xFF, b & 0xFF);
+          } else {
+            out.push(QOI_OP_RGBA, r & 0xFF, g & 0xFF, b & 0xFF, a & 0xFF);
+          }
+        }
+      }
+    }
+
+    prev_r = r; prev_g = g; prev_b = b; prev_a = a;
+  }
+
+  // flush any remaining run
+  if (run > 0) flushRun();
+
+  // 8-byte end marker: 7 x 0x00 followed by 0x01
+  out.push(0,0,0,0,0,0,0,1);
+
+  return new Uint8Array(out);
+}
+
+// Util: convert canvas RGBA to pixel array. If channels=3, we'll still pass 4-channel data but header will be 3.
+function getCanvasPixelData(img, useChannels) {
+  const canvas = hiddenCanvas;
+  const ctx = canvas.getContext('2d', {willReadFrequently:true});
+  canvas.width = img.width;
+  canvas.height = img.height;
+  ctx.clearRect(0,0,canvas.width, canvas.height);
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0,0,canvas.width, canvas.height);
+  // imageData.data is a Uint8ClampedArray of RGBA bytes
+  return imageData.data;
+}
+
+// Convert button behavior
+convertBtn.addEventListener('click', async () => {
+  if (!loadedImage || !loadedFile) return alert('No image loaded.');
+  downloadWrap.style.display = 'none';
+  progressWrap.hidden = false;
+  progressBar.value = 0;
+  progressText.textContent = 'Rasterizing image…';
+  setDebug('rasterizing image');
+
+  // small timeout so progress bar shows
+  await new Promise(r => setTimeout(r, 20));
+
+  const channels = parseInt(channelsSelect.value, 10); // 3 or 4
+  const colorspace = 0; // sRGB with linear alpha (informational)
+  const px = getCanvasPixelData(loadedImage, channels);
+  progressBar.value = 30;
+  progressText.textContent = 'Encoding QOI…';
+  setDebug('encoding qoi');
+
+  // run encoding (synchronous). If large images are used, this may block the UI for a bit.
+  try {
+    const qoiBytes = encodeQOI(loadedImage.width, loadedImage.height, channels, colorspace, px);
+    progressBar.value = 95;
+    progressText.textContent = 'Finalizing…';
+
+    // Create blob and download link
+    const blob = new Blob([qoiBytes], {type: 'application/octet-stream'});
+    const qoiName = loadedFile.name.replace(/\.[^/.]+$/, "") + ".qoi";
+    const objectUrl = URL.createObjectURL(blob);
+    downloadLink.href = objectUrl;
+    downloadLink.download = qoiName;
+    downloadLink.textContent = `Download ${qoiName}`;
+    downloadWrap.style.display = 'block';
+    sizeInfo.textContent = `QOI size: ${Math.round(qoiBytes.length/1024)} KB — original: ${Math.round(loadedFile.size/1024)} KB`;
+    progressBar.value = 100;
+    progressText.textContent = 'Done.';
+    setDebug('encoded qoi', Array.from(qoiBytes));
+  } catch (err) {
+    console.error(err);
+    alert('Encoding failed: ' + (err && err.message ? err.message : String(err)));
+    setDebug('error', new Uint8Array([]));
+  }
+});
+
+// revert/choose another
+revertBtn.addEventListener('click', () => {
+  fileInput.value = '';
+  loadedImage = null;
+  loadedFile = null;
+  resetUI();
+});
+
+// initial reset
+resetUI();
+</script>
+</body>
+</html>

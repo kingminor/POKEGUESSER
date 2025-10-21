@@ -1,0 +1,50 @@
+<!-- fetch.html -->
+<html>
+  <head>
+    <title>Fetch Activities</title>
+    <script src="main.js" defer></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center; /* center the list items and text */
+      }
+
+      #output {
+        display: flex;
+        flex-direction: column; /* stack name, image, buttons vertically */
+        align-items: center;    /* center horizontally */
+        justify-content: center; /* center vertically if needed */
+        margin: 20px auto;
+      }
+
+      #output img {
+        max-width: 300px; /* limit image size */
+        height: auto;
+      }
+
+      #output button {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #outputList {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+
+      #outputList li {
+        display: inline-block;
+        margin: 0 5px;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="outputList"></ul>
+    <section id="output"></section>
+  </body>
+</html>
