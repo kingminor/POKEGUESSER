@@ -1,5 +1,5 @@
 
-@import url('./variables.css');
+@import url('./global.css');
 
 body {
     margin: 0;
@@ -33,14 +33,57 @@ body {
     border: solid black 1px;
     width: 100vw;
     max-width: 500px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-section {
+main {
+    margin-top: 20px;
     width: 100vw;
-    height: 100vh;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
+}
+
+summary {
+    user-select: none;
+}
+
+summary:hover {
+    cursor: pointer;
+}
+
+details > div {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+details > div > div {
+    display: flex;
+    justify-self: center;
+    width: 60%;
+    justify-content: space-between;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    width: fit-content;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 100px;
+    font-family: var(--primary-font);
+    margin: 0 auto;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 @keyframes background-slide {

@@ -1,3 +1,8 @@
+
+import { setHeaderFooter } from "./header-footer.mjs";
+
+setHeaderFooter();
+
 // Register the service worker
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/service-worker.js')
