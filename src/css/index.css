@@ -1,1 +1,32 @@
+
 @import url('./variables.css');
+
+body {
+    margin: 0;
+}
+
+#sliding-background-container {
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#sliding-background {
+    height: 110vw;
+    position: absolute;
+    animation-name: background-slide;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes background-slide {
+    0% {
+        transform: translate(-14.2857%, 0);
+    }
+    100% {
+        transform: translate(0, -10%);
+    }
+}
