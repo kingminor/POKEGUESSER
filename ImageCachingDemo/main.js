@@ -20,35 +20,19 @@ async function loadPokemon(pokedexNumber) {
   const CRY_URL = `${BASE_CRY_URL}${pokedexNumber}.ogg`;
 
   try {
-    const cache = await caches.open('pokemon-cache-v1.1');
-
-    // --- Load image ---
-    let imageResponse = await cache.match(IMAGE_URL);
-    if (!imageResponse) {
-      imageResponse = await fetch(IMAGE_URL);
-      if (imageResponse.ok) await cache.put(IMAGE_URL, imageResponse.clone());
-    }
-
+    const imageResponse = await fetch(IMAGE_URL);
     const imageBlob = await imageResponse.blob();
     document.getElementById('pokemon-img').src = URL.createObjectURL(imageBlob);
 
-    // --- Load and play cry ---
-    let cryResponse = await cache.match(CRY_URL);
-    if (!cryResponse) {
-      cryResponse = await fetch(CRY_URL);
-      if (cryResponse.ok) await cache.put(CRY_URL, cryResponse.clone());
-    }
-
+    const cryResponse = await fetch(CRY_URL);
     const cryBlob = await cryResponse.blob();
     const audioURL = URL.createObjectURL(cryBlob);
 
-    // Stop previous cry if playing
     if (currentCryAudio) {
       currentCryAudio.pause();
       currentCryAudio.currentTime = 0;
     }
 
-    // Play new cry
     currentCryAudio = new Audio(audioURL);
     currentCryAudio.play().catch(err => console.warn('Could not play cry:', err));
 
@@ -57,6 +41,7 @@ async function loadPokemon(pokedexNumber) {
     alert('Failed to load Pokémon. Make sure the number is valid.');
   }
 }
+
 
 // Cache all Pokémon images and cries
 async function cacheAllPokemon() {
