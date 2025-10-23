@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 @import url('./variables.css');
 
 body {
@@ -8,19 +7,40 @@ body {
 
 #sliding-background-container {
     position: absolute;
+    top: 0;
+    left: 0;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
     display: flex;
+    z-index: -1;
 }
 
 #sliding-background {
-    height: 110vw;
+    min-width: 120vw;
+    min-height: 110vh;
     position: absolute;
     animation-name: background-slide;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+#game-settings {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid black 1px;
+    width: 100vw;
+    max-width: 500px;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes background-slide {
@@ -31,5 +51,3 @@ body {
         transform: translate(0, -10%);
     }
 }
-=======
->>>>>>> e3b99a4d2c3bd0b78c2e985800c1cfc0c16a5722
