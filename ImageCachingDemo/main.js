@@ -1,4 +1,5 @@
 const BASE_URL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
+const BASE_CRY_URL = 'https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/';
 const TOTAL_POKEMON = 1025;
 
 // Register the service worker
@@ -8,24 +9,56 @@ if ('serviceWorker' in navigator) {
     .catch(err => console.error('SW registration failed:', err));
 }
 
-// Load Pokémon image by number
+// Global variable to track currently playing cry
+let currentCryAudio = null;
+
+// Load Pokémon image and play cry by number
 async function loadPokemon(pokedexNumber) {
   if (!pokedexNumber) return;
 
   const IMAGE_URL = `${BASE_URL}${pokedexNumber}.png`;
+  const CRY_URL = `${BASE_CRY_URL}${pokedexNumber}.ogg`;
 
   try {
-    const response = await fetch(IMAGE_URL);
-    if (!response.ok) throw new Error('Pokémon not found');
-    const blob = await response.blob();
-    document.getElementById('pokemon-img').src = URL.createObjectURL(blob);
+    const cache = await caches.open('pokemon-cache-v1.1');
+
+    // --- Load image ---
+    let imageResponse = await cache.match(IMAGE_URL);
+    if (!imageResponse) {
+      imageResponse = await fetch(IMAGE_URL);
+      if (imageResponse.ok) await cache.put(IMAGE_URL, imageResponse.clone());
+    }
+
+    const imageBlob = await imageResponse.blob();
+    document.getElementById('pokemon-img').src = URL.createObjectURL(imageBlob);
+
+    // --- Load and play cry ---
+    let cryResponse = await cache.match(CRY_URL);
+    if (!cryResponse) {
+      cryResponse = await fetch(CRY_URL);
+      if (cryResponse.ok) await cache.put(CRY_URL, cryResponse.clone());
+    }
+
+    const cryBlob = await cryResponse.blob();
+    const audioURL = URL.createObjectURL(cryBlob);
+
+    // Stop previous cry if playing
+    if (currentCryAudio) {
+      currentCryAudio.pause();
+      currentCryAudio.currentTime = 0;
+    }
+
+    // Play new cry
+    currentCryAudio = new Audio(audioURL);
+    currentCryAudio.play().catch(err => console.warn('Could not play cry:', err));
+
   } catch (err) {
     console.error(err);
     alert('Failed to load Pokémon. Make sure the number is valid.');
   }
 }
 
-// Cache all Pokémon images
+// Cache all Pokémon images and cries
 async function cacheAllPokemon() {
   if (!('caches' in window)) return alert('Caching not supported');
 
@@ -33,40 +66,42 @@ async function cacheAllPokemon() {
   const progressBar = document.getElementById('progress-bar');
   const etaDisplay = document.getElementById('eta');
 
-  // Show ETA when caching starts
   etaDisplay.style.display = 'inline';
   progressBar.value = 0;
 
-  // Force browser to repaint the ETA span
   await new Promise(requestAnimationFrame);
 
-  let totalFetchTime = 0; // sum of fetch times
+  let totalFetchTime = 0;
   const startTime = Date.now();
 
   for (let i = 1; i <= TOTAL_POKEMON; i++) {
-    const url = `${BASE_URL}${i}.png`;
+    const imageUrl = `${BASE_URL}${i}.png`;
+    const cryUrl = `${BASE_CRY_URL}${i}.ogg`;
 
     try {
       const fetchStart = Date.now();
-      const response = await fetch(url);
-      if (response.ok) {
-        await cache.put(url, response.clone());
-      } else {
-        console.warn(`Failed to fetch Pokémon #${i}: Status ${response.status}`);
-      }
+
+      // Fetch image
+      const imageResponse = await fetch(imageUrl);
+      if (imageResponse.ok) await cache.put(imageUrl, imageResponse.clone());
+
+      // Fetch cry
+      const cryResponse = await fetch(cryUrl);
+      if (cryResponse.ok) await cache.put(cryUrl, cryResponse.clone());
+
       const fetchTime = (Date.now() - fetchStart) / 1000; // seconds
       totalFetchTime += fetchTime;
 
-      // Calculate ETA using average fetch time
-      const avgTimePerImage = totalFetchTime / i;
-      const imagesLeft = TOTAL_POKEMON - i;
-      const eta = (avgTimePerImage * imagesLeft).toFixed(1);
+      // ETA calculation
+      const avgTimePerPokemon = totalFetchTime / i;
+      const pokemonLeft = TOTAL_POKEMON - i;
+      const eta = (avgTimePerPokemon * pokemonLeft).toFixed(1);
 
-      // Update progress bar and ETA display
+      // Update progress bar and ETA
       progressBar.value = i;
       etaDisplay.textContent = `ETA: ${eta} sec`;
 
-      console.log(`Cached Pokémon #${i} | ETA: ${eta} sec remaining`);
+      console.log(`Cached Pokémon #${i} (image + cry) | ETA: ${eta} sec remaining`);
     } catch (err) {
       console.warn(`Failed to cache Pokémon #${i}:`, err);
     }
@@ -74,14 +109,11 @@ async function cacheAllPokemon() {
 
   const totalTime = ((Date.now() - startTime) / 1000).toFixed(1);
   progressBar.value = TOTAL_POKEMON;
-
-  // Hide ETA after caching completes
   etaDisplay.style.display = 'none';
 
-  console.log(`All Pokémon images cached in ${totalTime} seconds!`);
-  alert('All Pokémon images are cached!');
+  console.log(`All Pokémon images and cries cached in ${totalTime} seconds!`);
+  alert('All Pokémon images and cries are cached!');
 }
-
 
 // Event listeners
 const inputField = document.getElementById('pokedex-number');
@@ -93,7 +125,6 @@ document.getElementById('load-btn').addEventListener('click', () => {
 
 document.getElementById('cache-all-btn').addEventListener('click', cacheAllPokemon);
 
-// Load Pokémon when pressing Enter in the input field
 inputField.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     const number = inputField.value.trim();
