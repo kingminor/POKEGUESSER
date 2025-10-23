@@ -2,10 +2,16 @@ const CACHE_NAME = 'pokeguesser-cache-1.0';
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
-  '/index.js',
+  '/js/index.js',
   '/guesser.html',
-  '/guesser.js'
+  '/js/guesser.js',
+  '/css/variables.css',
+  '/css/index.css',
+  '/css/guesser.css',
+  '/media/404-not-found.jpg'
 ];
+
+const FALLBACK_IMAGE = '/media/404-not-found.jpg';
 
 // Install: cache main files
 self.addEventListener('install', event => {
@@ -58,9 +64,20 @@ self.addEventListener('fetch', event => {
           });
         }
         return networkResponse;
-      }).catch(err => {
+      }).catch(async err => {
         console.error('[Service Worker] Fetch failed; returning offline response:', err);
-        // Optionally return a fallback page or asset here if desired
+
+        // Serve fallback image if this is an image request
+        if (event.request.destination === 'image') {
+          const cache = await caches.open(CACHE_NAME);
+          const fallback = await cache.match(FALLBACK_IMAGE);
+          if (fallback) {
+            return fallback;
+          }
+        }
+
+        // Otherwise return a generic 404 text response
+        return new Response('Resource not found or offline', { status: 404 });
       });
     })
   );
