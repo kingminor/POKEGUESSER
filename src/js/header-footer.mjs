@@ -13,7 +13,9 @@ function setHeader() {
         <nav id="right-header">
             <a href="index.html">Home</a>
             <a href="leaderboard.html">Leaderboard</a>
-            <button><img src="./media/blankpfp.jpg" alt="profile-picture"></button>
+            <button id="pfp-button">
+                <img src="./media/blankpfp.jpg" alt="profile-picture">
+            </button>
         </nav>
     `;
 }
