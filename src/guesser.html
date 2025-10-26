@@ -9,11 +9,21 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        
-    </header>
+    <div id="sliding-background-container">
+        <img id="sliding-background" src="./media/sliding-background.svg">
+    </div>
+    <header></header>
     <main>
-        
+        <h1>Who's That Pokemon?</h1>
+        <form id="guess-form">
+            <input type="text" id="pokemon-input" placeholder="Type your guess..." autocomplete="off">
+            <button type="submit">Guess!</button>
+            <div id="suggestions"></div>
+        </form>
+        <section id="hints">
+            <img src="./media/unknown-texture.png" alt="Pokemon Silhouette" id="silhouette">
+            <button id="reveal">Reveal Next Hint</button>
+        </section>
     </main>
     <footer>
         

@@ -11,7 +11,7 @@ function setHeader() {
             <p>POKÉGUESSER</p>
         </div>
         <nav id="right-header">
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <a href="#">Leaderboard</a>
             <button><img src="./media/blankpfp.jpg" alt="profile-picture"></button>
         </nav>
