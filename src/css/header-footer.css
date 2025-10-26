@@ -1,4 +1,3 @@
-
 header {
   display: flex;
   justify-content: space-between;
@@ -7,53 +6,55 @@ header {
   color: white;
   height: 100px;
   font-size: x-large;
+}
 
-  #left-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+/* Left header */
+#left-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
 
-    img {
-      width: 80%;
-      height: 80%;
-    }
-  }
+#left-header img {
+  width: 80%;
+  height: 80%;
+}
 
-  #right-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
+/* Right header */
+#right-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
 
-    a {
-      text-decoration: none;
-      color: white;
-      display: flex;
-      align-items: center;
-      height: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
+#right-header a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-      &:hover {
-        background-color: black;
-      }
-    }
+#right-header a:hover {
+  background-color: black;
+}
 
-    button {
-        background: none;
-        border: 0;
-        height: 100%;
-        
-        img {
-            height: 80%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+#right-header button {
+  background: none;
+  border: 0;
+  height: 100%;
+}
 
-        &:hover{
-            background-color: black;
-        }
-    }
-  }
+#right-header button img {
+  height: 80%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#right-header button:hover {
+  background-color: black;
 }
