@@ -85,6 +85,7 @@ header {
   display: flex;
   align-items: center;  /* vertically center text and slider */
   gap: 10px;            /* space between text and slider */
+  padding-right: 10px;
 }
 
 .switch {
@@ -93,6 +94,7 @@ header {
   width: 50px;
   height: 28px;
   flex-shrink: 0;       /* prevents it from shrinking in flex */
+  
 }
 
 
