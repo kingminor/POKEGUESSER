@@ -34,7 +34,7 @@ body{
 }
 
 /* Sliding background */
-#sliding-background {
+.sliding-background {
     min-width: 120vw;
     min-height: 110vh;
     position: absolute;
