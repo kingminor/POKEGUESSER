@@ -18,8 +18,8 @@ function setHeader() {
                     <img src="./media/blankpfp.jpg" alt="profile-picture">
                 </button>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="#home">Profile</a>
-                    <a href="#about">Stats</a>
+                    <a href="#profile">Profile</a>
+                    <a href="#stats">Stats</a>
                     <a href="#contact">Contact</a>
                     <div class="switch-container">
                         <span>Animate Background</span>

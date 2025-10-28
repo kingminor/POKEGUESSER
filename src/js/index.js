@@ -34,6 +34,11 @@ const allPokemon1025 = allPokemon.slice(0, 1025);
 console.log(allPokemon1025);
 console.log(`Showing ${allPokemon1025.length} Pokémon`);
 
+//test function
+const response2 = await fetch("https://pokeapi.co/api/v2/pokemon/197/");
+const data2 = await response2.json();
+console.log(data2);
+
 
 const types = [
   'Bug',
