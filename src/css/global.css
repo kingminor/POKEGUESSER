@@ -20,3 +20,36 @@ body{
     all: unset;
     font-family: var(--primary-font);
 }
+
+/* Background container */
+#sliding-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: -1;
+}
+
+/* Sliding background */
+.sliding-background {
+    min-width: 120vw;
+    min-height: 110vh;
+    position: absolute;
+    animation-name: background-slide;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Animation for sliding background */
+@keyframes background-slide {
+    0% {
+        transform: translate(-14.2857%, 0);
+    }
+    100% {
+        transform: translate(0, -10%);
+    }
+}

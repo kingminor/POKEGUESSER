@@ -25,6 +25,21 @@ function checkboxTemplate(elementId, list) {
   }
 }
 
+const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
+const data = await response.json();
+const allPokemon = data.results;
+const allPokemon1025 = allPokemon.slice(0, 1025);
+
+// Log results
+console.log(allPokemon1025);
+console.log(`Showing ${allPokemon1025.length} Pokémon`);
+
+//test function
+const response2 = await fetch("https://pokeapi.co/api/v2/pokemon/197/");
+const data2 = await response2.json();
+console.log(data2);
+
+
 const types = [
   'Bug',
   'Dark',
@@ -53,7 +68,8 @@ const generations = [
   'Gen 5',
   'Gen 6',
   'Gen 7',
-  'Gen 8'
+  'Gen 8',
+  'Gen 9'
 ];
 
 checkboxTemplate('type-grid', types);
