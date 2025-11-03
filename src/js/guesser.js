@@ -1,4 +1,4 @@
-import { Initalize } from "./global.js";
+import { GlobalInitialize } from "./global.js";
 import {loadSelectedGenerations} from "./loader.js";
 
 const pokemonSilhouette = document.querySelector("#silhouette");
@@ -14,8 +14,8 @@ function parseURLParams() {
     const params = new URLSearchParams(window.location.search);
 
     // Get types and generations as arrays
-    selectedTypes = params.get('types') ? params.get('types').split(',') : [];
-    selectedGens = params.get('gens') ? params.get('gens').split(',') : [];
+    selectedTypes = params.get('types') ? params.get('types').split(',').map(t => t.trim()) : [];
+    selectedGens = params.get('gens') ? params.get('gens').split(',').map(g => g.trim()) : [];
 
     console.log('Selected Types from URL:', selectedTypes);
     console.log('Selected Generations from URL:', selectedGens);
@@ -28,15 +28,27 @@ function filterPokemonByTypes(pokemonList, selectedTypes){
 }
 
 //The code that gets run
-Initalize(); // Initalize from global script
+GlobalInitialize(); // Initalize from global script
 parseURLParams(); // Parse Param URLS
 availablePokemon = await loadSelectedGenerations(selectedGens); //Loads pokemon based on selected Generations
 availablePokemon = filterPokemonByTypes(availablePokemon, selectedTypes) // Filters By type
 console.log(availablePokemon);
+if(availablePokemon.length === 0) {
+    throw new Error("Pokemon List is Empty, Check URL Params!")
+}
 let selectedPokemon = availablePokemon[Math.floor(Math.random() * availablePokemon.length)] // Selects random pokemon
 pokemonSilhouette.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedPokemon.pokedexNumber}.png`;
 input.addEventListener("input", () => {
     const value = input.value.toLowerCase();
+
+    // Check if the input exactly matches any Pokémon name
+    const exactMatch = availablePokemon.some(pokemon => pokemon.name.toLowerCase() === value);
+
+    // If there's an exact match, clear the datalist so suggestions disappear
+    if (exactMatch) {
+        datalist.innerHTML = "";
+        return;
+    }
 
     // Filter by Pokémon name
     const filtered = availablePokemon.filter(pokemon =>

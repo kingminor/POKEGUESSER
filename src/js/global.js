@@ -1,7 +1,7 @@
 // PUT ALL CODE THAT WILL RUN ON EVERY PAGE HERE
 import { setHeaderFooter } from "./header-footer.mjs";
 
-export function Initalize(){
+export function GlobalInitialize(){
 
     // Register the service worker (DISABLED FOR TESTING);
   // if ('serviceWorker' in navigator) {

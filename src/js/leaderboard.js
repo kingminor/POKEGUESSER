@@ -1,3 +1,3 @@
-import { Initalize } from "./global.js";
+import { GlobalInitialize } from "./global.js";
 
-Initalize();
+GlobalInitialize();

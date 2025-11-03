@@ -1,6 +1,6 @@
-import { Initalize } from "./global.js";
+import { GlobalInitialize } from "./global.js";
 
-Initalize();
+GlobalInitialize();
 
 function typeTemplate(elementId, list) {
   const element = document.getElementById(elementId);
