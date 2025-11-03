@@ -10,7 +10,7 @@ if ('serviceWorker' in navigator) {
     .catch(err => console.error('SW registration failed:', err));
 }
 
-function checkboxTemplate(elementId, list) {
+function typeTemplate(elementId, list) {
   const element = document.getElementById(elementId);
   let attributeText = '';
   for (let i = 0; i < list.length; i ++) {
@@ -25,19 +25,34 @@ function checkboxTemplate(elementId, list) {
   }
 }
 
-const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
-const data = await response.json();
-const allPokemon = data.results;
-const allPokemon1025 = allPokemon.slice(0, 1025);
+function genTemplate(elementId, list){
+  const element = document.getElementById(elementId);
+  let attributeText = '';
+  for (let i = 0; i < list.length; i ++) {
+    attributeText = list[i].toLowerCase();
+    attributeText = attributeText.replace(/\s/g, '');
+    element.insertAdjacentHTML('beforeend', `
+      <div>
+        <label for="${attributeText}">Gen ${list[i]}</label>
+        <input id="${attributeText}" type="checkbox" checked>
+      </div>
+    `);
+  }
+}
 
+// --- Gets All 1025 Pokemon Data (Old Functionality)
+// const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
+// const data = await response.json();
+// const allPokemon = data.results;
+// const allPokemon1025 = allPokemon.slice(0, 1025);
 // Log results
-console.log(allPokemon1025);
-console.log(`Showing ${allPokemon1025.length} Pokémon`);
+// console.log(allPokemon1025);
+// console.log(`Showing ${allPokemon1025.length} Pokémon`);
 
 //test function
-const response2 = await fetch("https://pokeapi.co/api/v2/pokemon/197/");
-const data2 = await response2.json();
-console.log(data2);
+// const response2 = await fetch("https://pokeapi.co/api/v2/pokemon/197/");
+// const data2 = await response2.json();
+// console.log(data2);
 
 
 const types = [
@@ -61,16 +76,16 @@ const types = [
   'Water'
 ];
 const generations = [
-  'Gen 1',
-  'Gen 2',
-  'Gen 3',
-  'Gen 4',
-  'Gen 5',
-  'Gen 6',
-  'Gen 7',
-  'Gen 8',
-  'Gen 9'
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9'
 ];
 
-checkboxTemplate('type-grid', types);
-checkboxTemplate('gen-grid', generations);
+typeTemplate('type-grid', types);
+genTemplate('gen-grid', generations);
