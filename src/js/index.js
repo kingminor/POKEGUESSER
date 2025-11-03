@@ -1,14 +1,6 @@
+import { Initalize } from "./global.js";
 
-import { setHeaderFooter } from "./header-footer.mjs";
-
-setHeaderFooter();
-
-// Register the service worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js')
-    .then(reg => console.log('Service Worker registered!', reg))
-    .catch(err => console.error('SW registration failed:', err));
-}
+Initalize();
 
 function typeTemplate(elementId, list) {
   const element = document.getElementById(elementId);
@@ -23,6 +15,7 @@ function typeTemplate(elementId, list) {
       </div>
     `);
   }
+  console.log("Loaded Types");
 }
 
 function genTemplate(elementId, list){
@@ -38,7 +31,15 @@ function genTemplate(elementId, list){
       </div>
     `);
   }
+  console.log("Loaded Generations");
 }
+
+function getSelectedOptions(containerId) {
+  const container = document.getElementById(containerId);
+  const checkedInputs = container.querySelectorAll('input[type="checkbox"]:checked');
+  return Array.from(checkedInputs).map(input => input.id);
+}
+
 
 // --- Gets All 1025 Pokemon Data (Old Functionality)
 // const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
@@ -48,12 +49,10 @@ function genTemplate(elementId, list){
 // Log results
 // console.log(allPokemon1025);
 // console.log(`Showing ${allPokemon1025.length} Pokémon`);
-
 //test function
 // const response2 = await fetch("https://pokeapi.co/api/v2/pokemon/197/");
 // const data2 = await response2.json();
 // console.log(data2);
-
 
 const types = [
   'Bug',
@@ -89,3 +88,21 @@ const generations = [
 
 typeTemplate('type-grid', types);
 genTemplate('gen-grid', generations);
+
+document.querySelector("#game-settings").addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const selectedTypes = getSelectedOptions('type-grid');
+  const selectedGens = getSelectedOptions('gen-grid');
+
+  console.log('Selected Types:', selectedTypes);
+  console.log('Selected Generations:', selectedGens);
+
+  const params = new URLSearchParams();
+  if (selectedTypes.length) params.set('types', selectedTypes.join(','));
+  if (selectedGens.length) params.set('gens', selectedGens.join(','));
+
+  const url = `guesser.html?${params.toString()}`;
+  window.location.href = url;
+
+})
