@@ -98,6 +98,21 @@ document.querySelector("#game-settings").addEventListener('submit', (event) => {
   console.log('Selected Types:', selectedTypes);
   console.log('Selected Generations:', selectedGens);
 
+  // 1. Alert if either field has nothing selected
+  if (selectedTypes.length === 0 || selectedGens.length === 0) {
+    alert("Please select at least one Type and one Generation before continuing.");
+    return; // stop form submission
+  }
+
+  // 2. Alert if ONLY Dark type is selected and no gen after 1 is selected
+  const onlyDarkSelected = selectedTypes.length === 1 && selectedTypes.includes('dark');
+  const hasGenAfter1 = selectedGens.some(gen => parseInt(gen, 10) > 1);
+
+  if (onlyDarkSelected && !hasGenAfter1) {
+    alert("If you select only the Dark type, please include at least one Generation after 1.");
+    return; // stop form submission
+  }
+
   const params = new URLSearchParams();
   if (selectedTypes.length) params.set('types', selectedTypes.join(','));
   if (selectedGens.length) params.set('gens', selectedGens.join(','));
