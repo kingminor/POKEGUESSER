@@ -1,6 +1,10 @@
 import { Initalize } from "./global.js";
 import {loadSelectedGenerations} from "./loader.js";
 
+const pokemonSilhouette = document.querySelector("#silhouette");
+const input = document.querySelector("#pokemon-input");
+const datalist = document.querySelector("#pokemon-list");
+
 let selectedGens = [];
 let selectedTypes = [];
 let availablePokemon = [];
@@ -26,6 +30,25 @@ function filterPokemonByTypes(pokemonList, selectedTypes){
 //The code that gets run
 Initalize(); // Initalize from global script
 parseURLParams(); // Parse Param URLS
-availablePokemon = await loadSelectedGenerations(selectedGens);
-availablePokemon = filterPokemonByTypes(availablePokemon, selectedTypes)
+availablePokemon = await loadSelectedGenerations(selectedGens); //Loads pokemon based on selected Generations
+availablePokemon = filterPokemonByTypes(availablePokemon, selectedTypes) // Filters By type
 console.log(availablePokemon);
+let selectedPokemon = availablePokemon[Math.floor(Math.random() * availablePokemon.length)] // Selects random pokemon
+pokemonSilhouette.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedPokemon.pokedexNumber}.png`;
+input.addEventListener("input", () => {
+    const value = input.value.toLowerCase();
+
+    // Filter by Pokémon name
+    const filtered = availablePokemon.filter(pokemon =>
+        pokemon.name.toLowerCase().includes(value)
+    );
+
+    datalist.innerHTML = "";
+
+    // Add only the names to the datalist
+    filtered.slice(0, 20).forEach(pokemon => {
+        const option = document.createElement("option");
+        option.value = pokemon.name; // use name property
+        datalist.appendChild(option);
+    });
+});

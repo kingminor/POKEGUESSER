@@ -16,12 +16,12 @@
     <main>
         <h1>Who's That Pokemon?</h1>
         <form id="guess-form">
-            <input type="text" id="pokemon-input" placeholder="Type your guess..." autocomplete="off">
+            <input type="text" id="pokemon-input" placeholder="Type your guess..." list="pokemon-list">
             <button type="submit">Guess!</button>
-            <div id="suggestions"></div>
+            <datalist id="pokemon-list"></datalist>
         </form>
         <section id="hints">
-            <img src="./media/unknown-texture.png" alt="Pokemon Silhouette" id="silhouette">
+            <img src="./media/unknown-texture.png" alt="Pokemon Silhouette" id="silhouette" class="isShilhouette">
             <button id="reveal">Reveal Next Hint</button>
         </section>
     </main>

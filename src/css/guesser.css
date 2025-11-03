@@ -14,10 +14,25 @@ main {
 }
 
 #silhouette {
-  width: 15%;
+  width: 25%;
   padding: 5%;
   align-self: center;
   image-rendering: pixelated;
+}
+
+.isShilhouette {
+  filter: brightness(0) invert(0);
+
+  /* Prevents Draging to reveal image bug */
+  user-drag: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+
+  /* Prevents highlighting over image */
+  user-select: none;          /* Standard */
+  -webkit-user-select: none;  /* Chrome, Safari */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE/Edge */
 }
 
 #reveal {
