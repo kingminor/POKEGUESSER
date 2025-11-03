@@ -52,7 +52,7 @@ function doStuffList(data) {
  */
 function pickRandomPokemon() {
     if (allPokemon.length === 0) return;
-    const randomIndex = Math.floor(Math.random() * allPokemon.length);
+    const randomIndex = Math.floor(Math.random() * 151);
     const randomPokemon = allPokemon[randomIndex];
     getPokemon(randomPokemon.url); // Fetch full Pokémon data
 }

@@ -1,10 +1,18 @@
+let allPokemonData = [];
+let allNames = [];
+
 async function getPokemonData() {
   let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
   let json = await response.json();
   let pokemonList = json.results;
   console.log(pokemonList);
-  const allPokemon = await fetchAllPokemonDetails(pokemonList);
-  console.log(allPokemon);
+
+  pokemonList.map(p => p.name);
+
+  let newPokemonList = pokemonList.slice(0, 1025);
+  // Actual object output
+  allPokemonData = await fetchAllPokemonDetails(newPokemonList);
+  console.log(allPokemonData);
 }
 getPokemonData();
 
@@ -179,3 +187,15 @@ function getEvolutionMethod(evoData) {
 
   return method.trim();
 }
+
+document.getElementById("copyBtn").addEventListener("click", () => {
+  if (allPokemonData.length === 0) {
+    alert("Data not loaded yet. Please wait...");
+    return;
+  }
+
+  const jsonString = JSON.stringify(allPokemonData, null, 2); // formatted JSON
+  navigator.clipboard.writeText(jsonString)
+    .then(() => alert("Pokémon data copied to clipboard!"))
+    .catch((err) => alert("Failed to copy: " + err));
+});

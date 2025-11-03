@@ -1,0 +1,5076 @@
+[
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/650/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/650/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/337/",
+    "pokedexNumber": 650,
+    "name": "chespin",
+    "species": "Spiny Nut Pokémon",
+    "generation": "generation-vi",
+    "color": "green",
+    "type": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 56,
+      "attack": 61,
+      "defense": 65,
+      "specialAttack": 48,
+      "specialDefense": 45,
+      "speed": 38
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "bulletproof",
+          "url": "https://pokeapi.co/api/v2/ability/171/"
+        }
+      ]
+    },
+    "height": 4,
+    "weight": 90,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 45,
+    "baseExperience": 63,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "quilladin"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "chespin",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/650/"
+      }
+    ],
+    "flavorText": "The quills on its head are usually soft.When it flexes them, the points becomeso hard and sharp that they can pierce rock."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/651/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/651/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/337/",
+    "pokedexNumber": 651,
+    "name": "quilladin",
+    "species": "Spiny Armor Pokémon",
+    "generation": "generation-vi",
+    "color": "green",
+    "type": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 61,
+      "attack": 78,
+      "defense": 95,
+      "specialAttack": 56,
+      "specialDefense": 58,
+      "speed": 57
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "bulletproof",
+          "url": "https://pokeapi.co/api/v2/ability/171/"
+        }
+      ]
+    },
+    "height": 7,
+    "weight": 290,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 45,
+    "baseExperience": 142,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": {
+      "name": "chespin",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/650/"
+    },
+    "evolvesTo": [
+      "chesnaught"
+    ],
+    "evolutionTrigger": "Level 16",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "quilladin",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/651/"
+      }
+    ],
+    "flavorText": "It relies on its sturdy shell to deflect predators’attacks. It counterattacks with its sharp quills."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/652/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/652/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/337/",
+    "pokedexNumber": 652,
+    "name": "chesnaught",
+    "species": "Spiny Armor Pokémon",
+    "generation": "generation-vi",
+    "color": "green",
+    "type": [
+      "grass",
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 88,
+      "attack": 107,
+      "defense": 122,
+      "specialAttack": 74,
+      "specialDefense": 75,
+      "speed": 64
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "overgrow",
+          "url": "https://pokeapi.co/api/v2/ability/65/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "bulletproof",
+          "url": "https://pokeapi.co/api/v2/ability/171/"
+        }
+      ]
+    },
+    "height": 16,
+    "weight": 900,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 45,
+    "baseExperience": 239,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": {
+      "name": "quilladin",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/651/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 36",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "chesnaught",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/652/"
+      }
+    ],
+    "flavorText": "Its Tackle is forceful enough to flip a 50-ton tank.It shields its allies from danger with its own body."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/653/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/653/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/338/",
+    "pokedexNumber": 653,
+    "name": "fennekin",
+    "species": "Fox Pokémon",
+    "generation": "generation-vi",
+    "color": "red",
+    "type": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "attack": 45,
+      "defense": 40,
+      "specialAttack": 62,
+      "specialDefense": 60,
+      "speed": 60
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "blaze",
+          "url": "https://pokeapi.co/api/v2/ability/66/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "magician",
+          "url": "https://pokeapi.co/api/v2/ability/170/"
+        }
+      ]
+    },
+    "height": 4,
+    "weight": 94,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 45,
+    "baseExperience": 61,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "braixen"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "fennekin",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/653/"
+      }
+    ],
+    "flavorText": "Eating a twig fills it with energy,and its roomy ears give vent to airhotter than 390 degrees Fahrenheit."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/654/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/654/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/338/",
+    "pokedexNumber": 654,
+    "name": "braixen",
+    "species": "Fox Pokémon",
+    "generation": "generation-vi",
+    "color": "red",
+    "type": [
+      "fire"
+    ],
+    "baseStats": {
+      "hp": 59,
+      "attack": 59,
+      "defense": 58,
+      "specialAttack": 90,
+      "specialDefense": 70,
+      "speed": 73
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "blaze",
+          "url": "https://pokeapi.co/api/v2/ability/66/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "magician",
+          "url": "https://pokeapi.co/api/v2/ability/170/"
+        }
+      ]
+    },
+    "height": 10,
+    "weight": 145,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 45,
+    "baseExperience": 143,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": {
+      "name": "fennekin",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/653/"
+    },
+    "evolvesTo": [
+      "delphox"
+    ],
+    "evolutionTrigger": "Level 16",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "braixen",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/654/"
+      }
+    ],
+    "flavorText": "It has a twig stuck in its tail. Withfriction from its tail fur, it sets thetwig on fire and launches into battle."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/655/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/655/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/338/",
+    "pokedexNumber": 655,
+    "name": "delphox",
+    "species": "Fox Pokémon",
+    "generation": "generation-vi",
+    "color": "red",
+    "type": [
+      "fire",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "attack": 69,
+      "defense": 72,
+      "specialAttack": 114,
+      "specialDefense": 100,
+      "speed": 104
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "blaze",
+          "url": "https://pokeapi.co/api/v2/ability/66/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "magician",
+          "url": "https://pokeapi.co/api/v2/ability/170/"
+        }
+      ]
+    },
+    "height": 15,
+    "weight": 390,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 45,
+    "baseExperience": 240,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": {
+      "name": "braixen",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/654/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 36",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "delphox",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/655/"
+      }
+    ],
+    "flavorText": "It gazes into the flame at the tip ofits branch to achieve a focused state,which allows it to see into the future."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/656/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/656/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/339/",
+    "pokedexNumber": 656,
+    "name": "froakie",
+    "species": "Bubble Frog Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 41,
+      "attack": 56,
+      "defense": 40,
+      "specialAttack": 62,
+      "specialDefense": 44,
+      "speed": 71
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "torrent",
+          "url": "https://pokeapi.co/api/v2/ability/67/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "protean",
+          "url": "https://pokeapi.co/api/v2/ability/168/"
+        }
+      ]
+    },
+    "height": 3,
+    "weight": 70,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 45,
+    "baseExperience": 63,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "water1"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "frogadier"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "froakie",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/656/"
+      }
+    ],
+    "flavorText": "It secretes flexible bubbles from its chest and back.The bubbles reduce the damage it would otherwisetake when attacked."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/657/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/657/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/339/",
+    "pokedexNumber": 657,
+    "name": "frogadier",
+    "species": "Bubble Frog Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 54,
+      "attack": 63,
+      "defense": 52,
+      "specialAttack": 83,
+      "specialDefense": 56,
+      "speed": 97
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "torrent",
+          "url": "https://pokeapi.co/api/v2/ability/67/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "protean",
+          "url": "https://pokeapi.co/api/v2/ability/168/"
+        }
+      ]
+    },
+    "height": 6,
+    "weight": 109,
+    "primaryHabitat": "Unknown",
+    "shape": "humanoid",
+    "captureRate": 45,
+    "baseExperience": 142,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "water1"
+    ],
+    "evolvesFrom": {
+      "name": "froakie",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/656/"
+    },
+    "evolvesTo": [
+      "greninja"
+    ],
+    "evolutionTrigger": "Level 16",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "frogadier",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/657/"
+      }
+    ],
+    "flavorText": "It can throw bubble-covered pebbles with precisecontrol, hitting empty cans up to a hundred feet away."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/658/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/658/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/339/",
+    "pokedexNumber": 658,
+    "name": "greninja",
+    "species": "Ninja Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "water",
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 72,
+      "attack": 95,
+      "defense": 67,
+      "specialAttack": 103,
+      "specialDefense": 71,
+      "speed": 122
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "torrent",
+          "url": "https://pokeapi.co/api/v2/ability/67/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "protean",
+          "url": "https://pokeapi.co/api/v2/ability/168/"
+        }
+      ]
+    },
+    "height": 15,
+    "weight": 400,
+    "primaryHabitat": "Unknown",
+    "shape": "humanoid",
+    "captureRate": 45,
+    "baseExperience": 239,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "water1"
+    ],
+    "evolvesFrom": {
+      "name": "frogadier",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/657/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 36",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "greninja",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/658/"
+      }
+    ],
+    "flavorText": "It creates throwing stars out of compressed water.When it spins them and throws them at high speed,these stars can split metal in two."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/659/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/659/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/340/",
+    "pokedexNumber": 659,
+    "name": "bunnelby",
+    "species": "Digging Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 38,
+      "attack": 36,
+      "defense": 38,
+      "specialAttack": 32,
+      "specialDefense": 36,
+      "speed": 57
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "pickup",
+          "url": "https://pokeapi.co/api/v2/ability/53/"
+        },
+        {
+          "name": "cheek-pouch",
+          "url": "https://pokeapi.co/api/v2/ability/167/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "huge-power",
+          "url": "https://pokeapi.co/api/v2/ability/37/"
+        }
+      ]
+    },
+    "height": 4,
+    "weight": 50,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 255,
+    "baseExperience": 47,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "diggersby"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "bunnelby",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/659/"
+      }
+    ],
+    "flavorText": "They use their large ears to dig burrows.They will dig the whole night through."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/660/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/660/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/340/",
+    "pokedexNumber": 660,
+    "name": "diggersby",
+    "species": "Digging Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "normal",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "attack": 56,
+      "defense": 77,
+      "specialAttack": 50,
+      "specialDefense": 77,
+      "speed": 78
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "pickup",
+          "url": "https://pokeapi.co/api/v2/ability/53/"
+        },
+        {
+          "name": "cheek-pouch",
+          "url": "https://pokeapi.co/api/v2/ability/167/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "huge-power",
+          "url": "https://pokeapi.co/api/v2/ability/37/"
+        }
+      ]
+    },
+    "height": 10,
+    "weight": 424,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 127,
+    "baseExperience": 148,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": {
+      "name": "bunnelby",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/659/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 20",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "diggersby",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/660/"
+      }
+    ],
+    "flavorText": "With their powerful ears, they can heftboulders of a ton or more with ease.They can be a big help at construction sites."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/661/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/661/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/341/",
+    "pokedexNumber": 661,
+    "name": "fletchling",
+    "species": "Tiny Robin Pokémon",
+    "generation": "generation-vi",
+    "color": "red",
+    "type": [
+      "normal",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "attack": 50,
+      "defense": 43,
+      "specialAttack": 40,
+      "specialDefense": 38,
+      "speed": 62
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "big-pecks",
+          "url": "https://pokeapi.co/api/v2/ability/145/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "gale-wings",
+          "url": "https://pokeapi.co/api/v2/ability/177/"
+        }
+      ]
+    },
+    "height": 3,
+    "weight": 17,
+    "primaryHabitat": "Unknown",
+    "shape": "wings",
+    "captureRate": 255,
+    "baseExperience": 56,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "flying"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "fletchinder"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "fletchling",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/661/"
+      }
+    ],
+    "flavorText": "These friendly Pokémon send signalsto one another with beautiful chirpsand tail-feather movements."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/662/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/662/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/341/",
+    "pokedexNumber": 662,
+    "name": "fletchinder",
+    "species": "Ember Pokémon",
+    "generation": "generation-vi",
+    "color": "red",
+    "type": [
+      "fire",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 62,
+      "attack": 73,
+      "defense": 55,
+      "specialAttack": 56,
+      "specialDefense": 52,
+      "speed": 84
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "flame-body",
+          "url": "https://pokeapi.co/api/v2/ability/49/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "gale-wings",
+          "url": "https://pokeapi.co/api/v2/ability/177/"
+        }
+      ]
+    },
+    "height": 7,
+    "weight": 160,
+    "primaryHabitat": "Unknown",
+    "shape": "wings",
+    "captureRate": 120,
+    "baseExperience": 134,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "flying"
+    ],
+    "evolvesFrom": {
+      "name": "fletchling",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/661/"
+    },
+    "evolvesTo": [
+      "talonflame"
+    ],
+    "evolutionTrigger": "Level 17",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "fletchinder",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/662/"
+      }
+    ],
+    "flavorText": "From its beak, it expels embers that setthe tall grass on fire. Then it pounces onthe bewildered prey that pop out of the grass."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/663/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/663/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/341/",
+    "pokedexNumber": 663,
+    "name": "talonflame",
+    "species": "Scorching Pokémon",
+    "generation": "generation-vi",
+    "color": "red",
+    "type": [
+      "fire",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 78,
+      "attack": 81,
+      "defense": 71,
+      "specialAttack": 74,
+      "specialDefense": 69,
+      "speed": 126
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "flame-body",
+          "url": "https://pokeapi.co/api/v2/ability/49/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "gale-wings",
+          "url": "https://pokeapi.co/api/v2/ability/177/"
+        }
+      ]
+    },
+    "height": 12,
+    "weight": 245,
+    "primaryHabitat": "Unknown",
+    "shape": "wings",
+    "captureRate": 45,
+    "baseExperience": 175,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "flying"
+    ],
+    "evolvesFrom": {
+      "name": "fletchinder",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/662/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 35",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "talonflame",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/663/"
+      }
+    ],
+    "flavorText": "In the fever of an exciting battle, itshowers embers from the gaps betweenits feathers and takes to the air."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/664/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/664/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/342/",
+    "pokedexNumber": 664,
+    "name": "scatterbug",
+    "species": "Scatterdust Pokémon",
+    "generation": "generation-vi",
+    "color": "black",
+    "type": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 38,
+      "attack": 35,
+      "defense": 40,
+      "specialAttack": 27,
+      "specialDefense": 25,
+      "speed": 35
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "shield-dust",
+          "url": "https://pokeapi.co/api/v2/ability/19/"
+        },
+        {
+          "name": "compound-eyes",
+          "url": "https://pokeapi.co/api/v2/ability/14/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "friend-guard",
+          "url": "https://pokeapi.co/api/v2/ability/132/"
+        }
+      ]
+    },
+    "height": 3,
+    "weight": 25,
+    "primaryHabitat": "Unknown",
+    "shape": "armor",
+    "captureRate": 255,
+    "baseExperience": 40,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "bug"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "spewpa"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "scatterbug-icy-snow",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/664/"
+      },
+      {
+        "name": "scatterbug-polar",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10271/"
+      },
+      {
+        "name": "scatterbug-tundra",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10272/"
+      },
+      {
+        "name": "scatterbug-continental",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10273/"
+      },
+      {
+        "name": "scatterbug-garden",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10274/"
+      },
+      {
+        "name": "scatterbug-elegant",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10275/"
+      },
+      {
+        "name": "scatterbug-meadow",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10276/"
+      },
+      {
+        "name": "scatterbug-modern",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10277/"
+      },
+      {
+        "name": "scatterbug-marine",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10278/"
+      },
+      {
+        "name": "scatterbug-archipelago",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10279/"
+      },
+      {
+        "name": "scatterbug-high-plains",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10280/"
+      },
+      {
+        "name": "scatterbug-sandstorm",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10281/"
+      },
+      {
+        "name": "scatterbug-river",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10282/"
+      },
+      {
+        "name": "scatterbug-monsoon",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10283/"
+      },
+      {
+        "name": "scatterbug-savanna",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10284/"
+      },
+      {
+        "name": "scatterbug-sun",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10285/"
+      },
+      {
+        "name": "scatterbug-ocean",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10286/"
+      },
+      {
+        "name": "scatterbug-jungle",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10287/"
+      },
+      {
+        "name": "scatterbug-fancy",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10288/"
+      },
+      {
+        "name": "scatterbug-poke-ball",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10289/"
+      }
+    ],
+    "flavorText": "When under attack from bird Pokémon,it spews a poisonous black powderthat causes paralysis on contact."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/665/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/665/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/342/",
+    "pokedexNumber": 665,
+    "name": "spewpa",
+    "species": "Scatterdust Pokémon",
+    "generation": "generation-vi",
+    "color": "black",
+    "type": [
+      "bug"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "attack": 22,
+      "defense": 60,
+      "specialAttack": 27,
+      "specialDefense": 30,
+      "speed": 29
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "shed-skin",
+          "url": "https://pokeapi.co/api/v2/ability/61/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "friend-guard",
+          "url": "https://pokeapi.co/api/v2/ability/132/"
+        }
+      ]
+    },
+    "height": 3,
+    "weight": 84,
+    "primaryHabitat": "Unknown",
+    "shape": "blob",
+    "captureRate": 120,
+    "baseExperience": 75,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "bug"
+    ],
+    "evolvesFrom": {
+      "name": "scatterbug",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/664/"
+    },
+    "evolvesTo": [
+      "vivillon"
+    ],
+    "evolutionTrigger": "Level 9",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "spewpa-icy-snow",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/665/"
+      },
+      {
+        "name": "spewpa-polar",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10290/"
+      },
+      {
+        "name": "spewpa-tundra",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10291/"
+      },
+      {
+        "name": "spewpa-continental",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10292/"
+      },
+      {
+        "name": "spewpa-garden",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10293/"
+      },
+      {
+        "name": "spewpa-elegant",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10294/"
+      },
+      {
+        "name": "spewpa-meadow",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10295/"
+      },
+      {
+        "name": "spewpa-modern",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10296/"
+      },
+      {
+        "name": "spewpa-marine",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10297/"
+      },
+      {
+        "name": "spewpa-archipelago",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10298/"
+      },
+      {
+        "name": "spewpa-high-plains",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10299/"
+      },
+      {
+        "name": "spewpa-sandstorm",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10300/"
+      },
+      {
+        "name": "spewpa-river",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10301/"
+      },
+      {
+        "name": "spewpa-monsoon",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10302/"
+      },
+      {
+        "name": "spewpa-savanna",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10303/"
+      },
+      {
+        "name": "spewpa-sun",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10304/"
+      },
+      {
+        "name": "spewpa-ocean",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10305/"
+      },
+      {
+        "name": "spewpa-jungle",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10306/"
+      },
+      {
+        "name": "spewpa-fancy",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10307/"
+      },
+      {
+        "name": "spewpa-poke-ball",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10308/"
+      }
+    ],
+    "flavorText": "It lives hidden within thicket shadows.When predators attack, it quickly bristles the furcovering its body in an effort to threaten them."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/666/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/666/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/342/",
+    "pokedexNumber": 666,
+    "name": "vivillon",
+    "species": "Scale Pokémon",
+    "generation": "generation-vi",
+    "color": "white",
+    "type": [
+      "bug",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "attack": 52,
+      "defense": 50,
+      "specialAttack": 90,
+      "specialDefense": 50,
+      "speed": 89
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "shield-dust",
+          "url": "https://pokeapi.co/api/v2/ability/19/"
+        },
+        {
+          "name": "compound-eyes",
+          "url": "https://pokeapi.co/api/v2/ability/14/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "friend-guard",
+          "url": "https://pokeapi.co/api/v2/ability/132/"
+        }
+      ]
+    },
+    "height": 12,
+    "weight": 170,
+    "primaryHabitat": "Unknown",
+    "shape": "bug-wings",
+    "captureRate": 45,
+    "baseExperience": 185,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "bug"
+    ],
+    "evolvesFrom": {
+      "name": "spewpa",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/665/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 12",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "vivillon-meadow",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/666/"
+      },
+      {
+        "name": "vivillon-icy-snow",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10086/"
+      },
+      {
+        "name": "vivillon-polar",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10087/"
+      },
+      {
+        "name": "vivillon-tundra",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10088/"
+      },
+      {
+        "name": "vivillon-continental",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10089/"
+      },
+      {
+        "name": "vivillon-garden",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10090/"
+      },
+      {
+        "name": "vivillon-elegant",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10091/"
+      },
+      {
+        "name": "vivillon-modern",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10092/"
+      },
+      {
+        "name": "vivillon-marine",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10093/"
+      },
+      {
+        "name": "vivillon-archipelago",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10094/"
+      },
+      {
+        "name": "vivillon-high-plains",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10095/"
+      },
+      {
+        "name": "vivillon-sandstorm",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10096/"
+      },
+      {
+        "name": "vivillon-river",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10097/"
+      },
+      {
+        "name": "vivillon-monsoon",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10098/"
+      },
+      {
+        "name": "vivillon-savanna",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10099/"
+      },
+      {
+        "name": "vivillon-sun",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10100/"
+      },
+      {
+        "name": "vivillon-ocean",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10101/"
+      },
+      {
+        "name": "vivillon-jungle",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10102/"
+      },
+      {
+        "name": "vivillon-fancy",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10161/"
+      },
+      {
+        "name": "vivillon-poke-ball",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10162/"
+      }
+    ],
+    "flavorText": "Vivillon with many different patterns arefound all over the world. These patternsare affected by the climate of their habitat."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/667/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/667/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/343/",
+    "pokedexNumber": 667,
+    "name": "litleo",
+    "species": "Lion Cub Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "fire",
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 62,
+      "attack": 50,
+      "defense": 58,
+      "specialAttack": 73,
+      "specialDefense": 54,
+      "speed": 72
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "rivalry",
+          "url": "https://pokeapi.co/api/v2/ability/79/"
+        },
+        {
+          "name": "unnerve",
+          "url": "https://pokeapi.co/api/v2/ability/127/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "moxie",
+          "url": "https://pokeapi.co/api/v2/ability/153/"
+        }
+      ]
+    },
+    "height": 6,
+    "weight": 135,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 220,
+    "baseExperience": 74,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "pyroar"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "litleo",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/667/"
+      }
+    ],
+    "flavorText": "The stronger the opponent it faces,the more heat surges from its maneand the more power flows through its body."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/668/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/668/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/343/",
+    "pokedexNumber": 668,
+    "name": "pyroar",
+    "species": "Royal Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "fire",
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 86,
+      "attack": 68,
+      "defense": 72,
+      "specialAttack": 109,
+      "specialDefense": 66,
+      "speed": 106
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "rivalry",
+          "url": "https://pokeapi.co/api/v2/ability/79/"
+        },
+        {
+          "name": "unnerve",
+          "url": "https://pokeapi.co/api/v2/ability/127/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "moxie",
+          "url": "https://pokeapi.co/api/v2/ability/153/"
+        }
+      ]
+    },
+    "height": 15,
+    "weight": 815,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 65,
+    "baseExperience": 177,
+    "baseHappiness": 70,
+    "growthRate": "medium-slow",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": {
+      "name": "litleo",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/667/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 35",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "pyroar",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/668/"
+      }
+    ],
+    "flavorText": "The male with the largest mane of fireis the leader of the pride."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/669/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/669/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/344/",
+    "pokedexNumber": 669,
+    "name": "flabebe",
+    "species": "Single Bloom Pokémon",
+    "generation": "generation-vi",
+    "color": "white",
+    "type": [
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 44,
+      "attack": 38,
+      "defense": 39,
+      "specialAttack": 61,
+      "specialDefense": 79,
+      "speed": 42
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "flower-veil",
+          "url": "https://pokeapi.co/api/v2/ability/166/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "symbiosis",
+          "url": "https://pokeapi.co/api/v2/ability/180/"
+        }
+      ]
+    },
+    "height": 1,
+    "weight": 1,
+    "primaryHabitat": "Unknown",
+    "shape": "arms",
+    "captureRate": 225,
+    "baseExperience": 61,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "fairy"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "floette"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "flabebe-red",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/669/"
+      },
+      {
+        "name": "flabebe-yellow",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10103/"
+      },
+      {
+        "name": "flabebe-orange",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10104/"
+      },
+      {
+        "name": "flabebe-blue",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10105/"
+      },
+      {
+        "name": "flabebe-white",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10106/"
+      }
+    ],
+    "flavorText": "It draws out and controls the hidden powerof flowers. The flower Flabébé holdsis most likely part of its body."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/670/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/670/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/344/",
+    "pokedexNumber": 670,
+    "name": "floette",
+    "species": "Single Bloom Pokémon",
+    "generation": "generation-vi",
+    "color": "white",
+    "type": [
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 54,
+      "attack": 45,
+      "defense": 47,
+      "specialAttack": 75,
+      "specialDefense": 98,
+      "speed": 52
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "flower-veil",
+          "url": "https://pokeapi.co/api/v2/ability/166/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "symbiosis",
+          "url": "https://pokeapi.co/api/v2/ability/180/"
+        }
+      ]
+    },
+    "height": 2,
+    "weight": 9,
+    "primaryHabitat": "Unknown",
+    "shape": "arms",
+    "captureRate": 120,
+    "baseExperience": 130,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "fairy"
+    ],
+    "evolvesFrom": {
+      "name": "flabebe",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/669/"
+    },
+    "evolvesTo": [
+      "florges"
+    ],
+    "evolutionTrigger": "Level 19",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "floette-red",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/670/"
+      },
+      {
+        "name": "floette-yellow",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10107/"
+      },
+      {
+        "name": "floette-orange",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10108/"
+      },
+      {
+        "name": "floette-blue",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10109/"
+      },
+      {
+        "name": "floette-white",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10110/"
+      }
+    ],
+    "flavorText": "It flutters around fields of flowers and cares forflowers that are starting to wilt. It drawsout the hidden power of flowers to battle."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/671/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/671/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/344/",
+    "pokedexNumber": 671,
+    "name": "florges",
+    "species": "Garden Pokémon",
+    "generation": "generation-vi",
+    "color": "white",
+    "type": [
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 78,
+      "attack": 65,
+      "defense": 68,
+      "specialAttack": 112,
+      "specialDefense": 154,
+      "speed": 75
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "flower-veil",
+          "url": "https://pokeapi.co/api/v2/ability/166/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "symbiosis",
+          "url": "https://pokeapi.co/api/v2/ability/180/"
+        }
+      ]
+    },
+    "height": 11,
+    "weight": 100,
+    "primaryHabitat": "Unknown",
+    "shape": "arms",
+    "captureRate": 45,
+    "baseExperience": 248,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "fairy"
+    ],
+    "evolvesFrom": {
+      "name": "floette",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/670/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Use shiny-stone",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "florges-red",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/671/"
+      },
+      {
+        "name": "florges-yellow",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10111/"
+      },
+      {
+        "name": "florges-orange",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10112/"
+      },
+      {
+        "name": "florges-blue",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10113/"
+      },
+      {
+        "name": "florges-white",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10114/"
+      }
+    ],
+    "flavorText": "It claims exquisite flower gardens as its territory,and it obtains power from basking in the energyemitted by flowering plants."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/672/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/672/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/345/",
+    "pokedexNumber": 672,
+    "name": "skiddo",
+    "species": "Mount Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 66,
+      "attack": 65,
+      "defense": 48,
+      "specialAttack": 62,
+      "specialDefense": 57,
+      "speed": 52
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "sap-sipper",
+          "url": "https://pokeapi.co/api/v2/ability/157/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "grass-pelt",
+          "url": "https://pokeapi.co/api/v2/ability/179/"
+        }
+      ]
+    },
+    "height": 9,
+    "weight": 310,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 200,
+    "baseExperience": 70,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "gogoat"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "skiddo",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/672/"
+      }
+    ],
+    "flavorText": "Thought to be one of the first Pokémon to live inharmony with humans, it has a placid disposition."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/673/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/673/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/345/",
+    "pokedexNumber": 673,
+    "name": "gogoat",
+    "species": "Mount Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 123,
+      "attack": 100,
+      "defense": 62,
+      "specialAttack": 97,
+      "specialDefense": 81,
+      "speed": 68
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "sap-sipper",
+          "url": "https://pokeapi.co/api/v2/ability/157/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "grass-pelt",
+          "url": "https://pokeapi.co/api/v2/ability/179/"
+        }
+      ]
+    },
+    "height": 17,
+    "weight": 910,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 45,
+    "baseExperience": 186,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": {
+      "name": "skiddo",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/672/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 32",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "gogoat",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/673/"
+      }
+    ],
+    "flavorText": "It can tell how its Trainer is feeling bysubtle shifts in the grip on its horns.This empathic sense lets them run as if one being."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/674/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/674/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/346/",
+    "pokedexNumber": 674,
+    "name": "pancham",
+    "species": "Playful Pokémon",
+    "generation": "generation-vi",
+    "color": "white",
+    "type": [
+      "fighting"
+    ],
+    "baseStats": {
+      "hp": 67,
+      "attack": 82,
+      "defense": 62,
+      "specialAttack": 46,
+      "specialDefense": 48,
+      "speed": 43
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "iron-fist",
+          "url": "https://pokeapi.co/api/v2/ability/89/"
+        },
+        {
+          "name": "mold-breaker",
+          "url": "https://pokeapi.co/api/v2/ability/104/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "scrappy",
+          "url": "https://pokeapi.co/api/v2/ability/113/"
+        }
+      ]
+    },
+    "height": 6,
+    "weight": 80,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 220,
+    "baseExperience": 70,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground",
+      "humanshape"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "pangoro"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 25,
+    "forms": [
+      {
+        "name": "pancham",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/674/"
+      }
+    ],
+    "flavorText": "It does its best to be taken seriously by its enemies,but its glare is not sufficiently intimidating.Chewing on a leaf is its trademark."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/675/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/675/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/346/",
+    "pokedexNumber": 675,
+    "name": "pangoro",
+    "species": "Daunting Pokémon",
+    "generation": "generation-vi",
+    "color": "white",
+    "type": [
+      "fighting",
+      "dark"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "attack": 124,
+      "defense": 78,
+      "specialAttack": 69,
+      "specialDefense": 71,
+      "speed": 58
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "iron-fist",
+          "url": "https://pokeapi.co/api/v2/ability/89/"
+        },
+        {
+          "name": "mold-breaker",
+          "url": "https://pokeapi.co/api/v2/ability/104/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "scrappy",
+          "url": "https://pokeapi.co/api/v2/ability/113/"
+        }
+      ]
+    },
+    "height": 21,
+    "weight": 1360,
+    "primaryHabitat": "Unknown",
+    "shape": "humanoid",
+    "captureRate": 65,
+    "baseExperience": 173,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground",
+      "humanshape"
+    ],
+    "evolvesFrom": {
+      "name": "pancham",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/674/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 32",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 25,
+    "forms": [
+      {
+        "name": "pangoro",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/675/"
+      }
+    ],
+    "flavorText": "Although it possesses a violent temperament,it won’t put up with bullying. It uses the leaf inits mouth to sense the movements of its enemies."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/676/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/676/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/347/",
+    "pokedexNumber": 676,
+    "name": "furfrou",
+    "species": "Poodle Pokémon",
+    "generation": "generation-vi",
+    "color": "white",
+    "type": [
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 75,
+      "attack": 80,
+      "defense": 60,
+      "specialAttack": 65,
+      "specialDefense": 90,
+      "speed": 102
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "fur-coat",
+          "url": "https://pokeapi.co/api/v2/ability/169/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 12,
+    "weight": 280,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 160,
+    "baseExperience": 165,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "furfrou-natural",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/676/"
+      },
+      {
+        "name": "furfrou-heart",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10115/"
+      },
+      {
+        "name": "furfrou-star",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10116/"
+      },
+      {
+        "name": "furfrou-diamond",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10117/"
+      },
+      {
+        "name": "furfrou-debutante",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10118/"
+      },
+      {
+        "name": "furfrou-matron",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10119/"
+      },
+      {
+        "name": "furfrou-dandy",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10120/"
+      },
+      {
+        "name": "furfrou-la-reine",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10121/"
+      },
+      {
+        "name": "furfrou-kabuki",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10122/"
+      },
+      {
+        "name": "furfrou-pharaoh",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10123/"
+      }
+    ],
+    "flavorText": "Trimming its fluffy fur not only makesit more elegant but also increases theswiftness of its movements."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/677/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/677/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/348/",
+    "pokedexNumber": 677,
+    "name": "espurr",
+    "species": "Restraint Pokémon",
+    "generation": "generation-vi",
+    "color": "gray",
+    "type": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 62,
+      "attack": 48,
+      "defense": 54,
+      "specialAttack": 63,
+      "specialDefense": 60,
+      "speed": 68
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "keen-eye",
+          "url": "https://pokeapi.co/api/v2/ability/51/"
+        },
+        {
+          "name": "infiltrator",
+          "url": "https://pokeapi.co/api/v2/ability/151/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "own-tempo",
+          "url": "https://pokeapi.co/api/v2/ability/20/"
+        }
+      ]
+    },
+    "height": 3,
+    "weight": 35,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 190,
+    "baseExperience": 71,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "meowstic"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "espurr",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/677/"
+      }
+    ],
+    "flavorText": "The organ that emits its intense psychic power issheltered by its ears to keep power from leaking out."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/678/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/678/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/348/",
+    "pokedexNumber": 678,
+    "name": "meowstic-male",
+    "species": "Constraint Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 74,
+      "attack": 48,
+      "defense": 76,
+      "specialAttack": 83,
+      "specialDefense": 81,
+      "speed": 104
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "keen-eye",
+          "url": "https://pokeapi.co/api/v2/ability/51/"
+        },
+        {
+          "name": "infiltrator",
+          "url": "https://pokeapi.co/api/v2/ability/151/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "prankster",
+          "url": "https://pokeapi.co/api/v2/ability/158/"
+        }
+      ]
+    },
+    "height": 6,
+    "weight": 85,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 75,
+    "baseExperience": 163,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "meowstic-male",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/678/"
+      }
+    ],
+    "flavorText": "When in danger, it raises its ears andreleases enough psychic power togrind a 10-ton truck into dust."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/679/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/679/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/349/",
+    "pokedexNumber": 679,
+    "name": "honedge",
+    "species": "Sword Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "steel",
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "attack": 80,
+      "defense": 100,
+      "specialAttack": 35,
+      "specialDefense": 37,
+      "speed": 28
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "no-guard",
+          "url": "https://pokeapi.co/api/v2/ability/99/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 8,
+    "weight": 20,
+    "primaryHabitat": "Unknown",
+    "shape": "blob",
+    "captureRate": 180,
+    "baseExperience": 65,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "mineral"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "doublade"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "honedge",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/679/"
+      }
+    ],
+    "flavorText": "Apparently this Pokémon is born when adeparted spirit inhabits a sword. It attaches itselfto people and drinks their life force."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/680/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/680/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/349/",
+    "pokedexNumber": 680,
+    "name": "doublade",
+    "species": "Sword Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "steel",
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 59,
+      "attack": 110,
+      "defense": 150,
+      "specialAttack": 45,
+      "specialDefense": 49,
+      "speed": 35
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "no-guard",
+          "url": "https://pokeapi.co/api/v2/ability/99/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 8,
+    "weight": 45,
+    "primaryHabitat": "Unknown",
+    "shape": "heads",
+    "captureRate": 90,
+    "baseExperience": 157,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "mineral"
+    ],
+    "evolvesFrom": {
+      "name": "honedge",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/679/"
+    },
+    "evolvesTo": [
+      "aegislash"
+    ],
+    "evolutionTrigger": "Level 35",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "doublade",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/680/"
+      }
+    ],
+    "flavorText": "When Honedge evolves, it divides into two swords,which cooperate via telepathy to coordinate attacksand slash their enemies to ribbons."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/681/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/681/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/349/",
+    "pokedexNumber": 681,
+    "name": "aegislash-shield",
+    "species": "Royal Sword Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "steel",
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "attack": 50,
+      "defense": 140,
+      "specialAttack": 50,
+      "specialDefense": 140,
+      "speed": 60
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "stance-change",
+          "url": "https://pokeapi.co/api/v2/ability/176/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 17,
+    "weight": 530,
+    "primaryHabitat": "Unknown",
+    "shape": "blob",
+    "captureRate": 45,
+    "baseExperience": 234,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "mineral"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "aegislash-shield",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/681/"
+      }
+    ],
+    "flavorText": "Generations of kings were attended by thesePokémon, which used their spectral power tomanipulate and control people and Pokémon."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/682/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/682/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/350/",
+    "pokedexNumber": 682,
+    "name": "spritzee",
+    "species": "Perfume Pokémon",
+    "generation": "generation-vi",
+    "color": "pink",
+    "type": [
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 78,
+      "attack": 52,
+      "defense": 60,
+      "specialAttack": 63,
+      "specialDefense": 65,
+      "speed": 23
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "healer",
+          "url": "https://pokeapi.co/api/v2/ability/131/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "aroma-veil",
+          "url": "https://pokeapi.co/api/v2/ability/165/"
+        }
+      ]
+    },
+    "height": 2,
+    "weight": 5,
+    "primaryHabitat": "Unknown",
+    "shape": "arms",
+    "captureRate": 200,
+    "baseExperience": 68,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "fairy"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "aromatisse"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "spritzee",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/682/"
+      }
+    ],
+    "flavorText": "It emits a scent that enraptures thosewho smell it. This fragrance changesdepending on what it has eaten."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/683/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/683/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/350/",
+    "pokedexNumber": 683,
+    "name": "aromatisse",
+    "species": "Fragrance Pokémon",
+    "generation": "generation-vi",
+    "color": "pink",
+    "type": [
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 101,
+      "attack": 72,
+      "defense": 72,
+      "specialAttack": 99,
+      "specialDefense": 89,
+      "speed": 29
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "healer",
+          "url": "https://pokeapi.co/api/v2/ability/131/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "aroma-veil",
+          "url": "https://pokeapi.co/api/v2/ability/165/"
+        }
+      ]
+    },
+    "height": 8,
+    "weight": 155,
+    "primaryHabitat": "Unknown",
+    "shape": "humanoid",
+    "captureRate": 140,
+    "baseExperience": 162,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "fairy"
+    ],
+    "evolvesFrom": {
+      "name": "spritzee",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/682/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Trade while holding sachet",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "aromatisse",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/683/"
+      }
+    ],
+    "flavorText": "It devises various scents, pleasant and unpleasant,and emits scents that its enemies dislike in orderto gain an edge in battle."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/684/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/684/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/351/",
+    "pokedexNumber": 684,
+    "name": "swirlix",
+    "species": "Cotton Candy Pokémon",
+    "generation": "generation-vi",
+    "color": "white",
+    "type": [
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 62,
+      "attack": 48,
+      "defense": 66,
+      "specialAttack": 59,
+      "specialDefense": 57,
+      "speed": 49
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "sweet-veil",
+          "url": "https://pokeapi.co/api/v2/ability/175/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "unburden",
+          "url": "https://pokeapi.co/api/v2/ability/84/"
+        }
+      ]
+    },
+    "height": 4,
+    "weight": 35,
+    "primaryHabitat": "Unknown",
+    "shape": "legs",
+    "captureRate": 200,
+    "baseExperience": 68,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "fairy"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "slurpuff"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "swirlix",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/684/"
+      }
+    ],
+    "flavorText": "To entangle its opponents in battle, it extrudeswhite threads as sweet and sticky as cotton candy."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/685/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/685/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/351/",
+    "pokedexNumber": 685,
+    "name": "slurpuff",
+    "species": "Meringue Pokémon",
+    "generation": "generation-vi",
+    "color": "white",
+    "type": [
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 82,
+      "attack": 80,
+      "defense": 86,
+      "specialAttack": 85,
+      "specialDefense": 75,
+      "speed": 72
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "sweet-veil",
+          "url": "https://pokeapi.co/api/v2/ability/175/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "unburden",
+          "url": "https://pokeapi.co/api/v2/ability/84/"
+        }
+      ]
+    },
+    "height": 8,
+    "weight": 50,
+    "primaryHabitat": "Unknown",
+    "shape": "humanoid",
+    "captureRate": 140,
+    "baseExperience": 168,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "fairy"
+    ],
+    "evolvesFrom": {
+      "name": "swirlix",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/684/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Trade while holding whipped-dream",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "slurpuff",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/685/"
+      }
+    ],
+    "flavorText": "It can distinguish the faintest of scents.It puts its sensitive sense of smell to useby helping pastry chefs in their work."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/686/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/686/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/352/",
+    "pokedexNumber": 686,
+    "name": "inkay",
+    "species": "Revolving Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "dark",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 53,
+      "attack": 54,
+      "defense": 53,
+      "specialAttack": 37,
+      "specialDefense": 46,
+      "speed": 45
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "contrary",
+          "url": "https://pokeapi.co/api/v2/ability/126/"
+        },
+        {
+          "name": "suction-cups",
+          "url": "https://pokeapi.co/api/v2/ability/21/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "infiltrator",
+          "url": "https://pokeapi.co/api/v2/ability/151/"
+        }
+      ]
+    },
+    "height": 4,
+    "weight": 35,
+    "primaryHabitat": "Unknown",
+    "shape": "tentacles",
+    "captureRate": 190,
+    "baseExperience": 58,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "water1",
+      "water2"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "malamar"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "inkay",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/686/"
+      }
+    ],
+    "flavorText": "Opponents who stare at the flashing of thelight-emitting spots on its body becomedazed and lose their will to fight."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/687/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/687/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/352/",
+    "pokedexNumber": 687,
+    "name": "malamar",
+    "species": "Overturning Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "dark",
+      "psychic"
+    ],
+    "baseStats": {
+      "hp": 86,
+      "attack": 92,
+      "defense": 88,
+      "specialAttack": 68,
+      "specialDefense": 75,
+      "speed": 73
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "contrary",
+          "url": "https://pokeapi.co/api/v2/ability/126/"
+        },
+        {
+          "name": "suction-cups",
+          "url": "https://pokeapi.co/api/v2/ability/21/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "infiltrator",
+          "url": "https://pokeapi.co/api/v2/ability/151/"
+        }
+      ]
+    },
+    "height": 15,
+    "weight": 470,
+    "primaryHabitat": "Unknown",
+    "shape": "blob",
+    "captureRate": 80,
+    "baseExperience": 169,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "water1",
+      "water2"
+    ],
+    "evolvesFrom": {
+      "name": "inkay",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/686/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 30",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "malamar",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/687/"
+      }
+    ],
+    "flavorText": "It wields the most compelling hypnotic powersof any Pokémon, and it forces others to dowhatever it wants."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/688/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/688/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/353/",
+    "pokedexNumber": 688,
+    "name": "binacle",
+    "species": "Two-Handed Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "rock",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 42,
+      "attack": 52,
+      "defense": 67,
+      "specialAttack": 39,
+      "specialDefense": 56,
+      "speed": 50
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "tough-claws",
+          "url": "https://pokeapi.co/api/v2/ability/181/"
+        },
+        {
+          "name": "sniper",
+          "url": "https://pokeapi.co/api/v2/ability/97/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "pickpocket",
+          "url": "https://pokeapi.co/api/v2/ability/124/"
+        }
+      ]
+    },
+    "height": 5,
+    "weight": 310,
+    "primaryHabitat": "Unknown",
+    "shape": "heads",
+    "captureRate": 120,
+    "baseExperience": 61,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "water3"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "barbaracle"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "binacle",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/688/"
+      }
+    ],
+    "flavorText": "Two Binacle live together on one rock.When they fight, one of them will moveto a different rock."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/689/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/689/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/353/",
+    "pokedexNumber": 689,
+    "name": "barbaracle",
+    "species": "Collective Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "rock",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 72,
+      "attack": 105,
+      "defense": 115,
+      "specialAttack": 54,
+      "specialDefense": 86,
+      "speed": 68
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "tough-claws",
+          "url": "https://pokeapi.co/api/v2/ability/181/"
+        },
+        {
+          "name": "sniper",
+          "url": "https://pokeapi.co/api/v2/ability/97/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "pickpocket",
+          "url": "https://pokeapi.co/api/v2/ability/124/"
+        }
+      ]
+    },
+    "height": 13,
+    "weight": 960,
+    "primaryHabitat": "Unknown",
+    "shape": "heads",
+    "captureRate": 45,
+    "baseExperience": 175,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "water3"
+    ],
+    "evolvesFrom": {
+      "name": "binacle",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/688/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 39",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "barbaracle",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/689/"
+      }
+    ],
+    "flavorText": "When they evolve, two Binacle multiply into seven.They fight with the power of seven Binacle."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/690/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/690/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/354/",
+    "pokedexNumber": 690,
+    "name": "skrelp",
+    "species": "Mock Kelp Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "poison",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "attack": 60,
+      "defense": 60,
+      "specialAttack": 60,
+      "specialDefense": 60,
+      "speed": 30
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "poison-point",
+          "url": "https://pokeapi.co/api/v2/ability/38/"
+        },
+        {
+          "name": "poison-touch",
+          "url": "https://pokeapi.co/api/v2/ability/143/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "adaptability",
+          "url": "https://pokeapi.co/api/v2/ability/91/"
+        }
+      ]
+    },
+    "height": 5,
+    "weight": 73,
+    "primaryHabitat": "Unknown",
+    "shape": "blob",
+    "captureRate": 225,
+    "baseExperience": 64,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "water1",
+      "dragon"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "dragalge"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "skrelp",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/690/"
+      }
+    ],
+    "flavorText": "Camouflaged as rotten kelp, they sprayliquid poison on prey that approachesunawares and then finish it off."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/691/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/691/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/354/",
+    "pokedexNumber": 691,
+    "name": "dragalge",
+    "species": "Mock Kelp Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "poison",
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "attack": 75,
+      "defense": 90,
+      "specialAttack": 97,
+      "specialDefense": 123,
+      "speed": 44
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "poison-point",
+          "url": "https://pokeapi.co/api/v2/ability/38/"
+        },
+        {
+          "name": "poison-touch",
+          "url": "https://pokeapi.co/api/v2/ability/143/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "adaptability",
+          "url": "https://pokeapi.co/api/v2/ability/91/"
+        }
+      ]
+    },
+    "height": 18,
+    "weight": 815,
+    "primaryHabitat": "Unknown",
+    "shape": "blob",
+    "captureRate": 55,
+    "baseExperience": 173,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "water1",
+      "dragon"
+    ],
+    "evolvesFrom": {
+      "name": "skrelp",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/690/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 48",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "dragalge",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/691/"
+      }
+    ],
+    "flavorText": "Their poison is strong enough to eat throughthe hull of a tanker, and they spit it indiscriminatelyat anything that enters their territory."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/692/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/692/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/355/",
+    "pokedexNumber": 692,
+    "name": "clauncher",
+    "species": "Water Gun Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "attack": 53,
+      "defense": 62,
+      "specialAttack": 58,
+      "specialDefense": 63,
+      "speed": 44
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "mega-launcher",
+          "url": "https://pokeapi.co/api/v2/ability/178/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 5,
+    "weight": 83,
+    "primaryHabitat": "Unknown",
+    "shape": "armor",
+    "captureRate": 225,
+    "baseExperience": 66,
+    "baseHappiness": 70,
+    "growthRate": "slow",
+    "eggGroups": [
+      "water1",
+      "water3"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "clawitzer"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "clauncher",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/692/"
+      }
+    ],
+    "flavorText": "They knock down flying prey by firingcompressed water from their massiveclaws like shooting a pistol."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/693/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/693/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/355/",
+    "pokedexNumber": 693,
+    "name": "clawitzer",
+    "species": "Howitzer Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "water"
+    ],
+    "baseStats": {
+      "hp": 71,
+      "attack": 73,
+      "defense": 88,
+      "specialAttack": 120,
+      "specialDefense": 89,
+      "speed": 59
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "mega-launcher",
+          "url": "https://pokeapi.co/api/v2/ability/178/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 13,
+    "weight": 353,
+    "primaryHabitat": "Unknown",
+    "shape": "squiggle",
+    "captureRate": 55,
+    "baseExperience": 100,
+    "baseHappiness": 70,
+    "growthRate": "slow",
+    "eggGroups": [
+      "water1",
+      "water3"
+    ],
+    "evolvesFrom": {
+      "name": "clauncher",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/692/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 37",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 15,
+    "forms": [
+      {
+        "name": "clawitzer",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/693/"
+      }
+    ],
+    "flavorText": "Their enormous claws launch cannonballs ofwater powerful enough to pierce tanker hulls."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/694/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/694/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/356/",
+    "pokedexNumber": 694,
+    "name": "helioptile",
+    "species": "Generator Pokémon",
+    "generation": "generation-vi",
+    "color": "yellow",
+    "type": [
+      "electric",
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 44,
+      "attack": 38,
+      "defense": 33,
+      "specialAttack": 61,
+      "specialDefense": 43,
+      "speed": 70
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "dry-skin",
+          "url": "https://pokeapi.co/api/v2/ability/87/"
+        },
+        {
+          "name": "sand-veil",
+          "url": "https://pokeapi.co/api/v2/ability/8/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "solar-power",
+          "url": "https://pokeapi.co/api/v2/ability/94/"
+        }
+      ]
+    },
+    "height": 5,
+    "weight": 60,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 190,
+    "baseExperience": 58,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "monster",
+      "dragon"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "heliolisk"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "helioptile",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/694/"
+      }
+    ],
+    "flavorText": "They make their home in deserts. They cangenerate their energy from basking in the sun,so eating food is not a requirement."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/695/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/695/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/356/",
+    "pokedexNumber": 695,
+    "name": "heliolisk",
+    "species": "Generator Pokémon",
+    "generation": "generation-vi",
+    "color": "yellow",
+    "type": [
+      "electric",
+      "normal"
+    ],
+    "baseStats": {
+      "hp": 62,
+      "attack": 55,
+      "defense": 52,
+      "specialAttack": 109,
+      "specialDefense": 94,
+      "speed": 109
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "dry-skin",
+          "url": "https://pokeapi.co/api/v2/ability/87/"
+        },
+        {
+          "name": "sand-veil",
+          "url": "https://pokeapi.co/api/v2/ability/8/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "solar-power",
+          "url": "https://pokeapi.co/api/v2/ability/94/"
+        }
+      ]
+    },
+    "height": 10,
+    "weight": 210,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 75,
+    "baseExperience": 168,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "monster",
+      "dragon"
+    ],
+    "evolvesFrom": {
+      "name": "helioptile",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/694/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Use sun-stone",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "heliolisk",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/695/"
+      }
+    ],
+    "flavorText": "They flare their frills and generate energy.A single Heliolisk can generate sufficientelectricity to power a skyscraper."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/696/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/696/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/357/",
+    "pokedexNumber": 696,
+    "name": "tyrunt",
+    "species": "Royal Heir Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "rock",
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 58,
+      "attack": 89,
+      "defense": 77,
+      "specialAttack": 45,
+      "specialDefense": 45,
+      "speed": 48
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "strong-jaw",
+          "url": "https://pokeapi.co/api/v2/ability/173/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "sturdy",
+          "url": "https://pokeapi.co/api/v2/ability/5/"
+        }
+      ]
+    },
+    "height": 8,
+    "weight": 260,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 45,
+    "baseExperience": 72,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "monster",
+      "dragon"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "tyrantrum"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 30,
+    "forms": [
+      {
+        "name": "tyrunt",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/696/"
+      }
+    ],
+    "flavorText": "This Pokémon was restored from a fossil.If something happens that it doesn’t like,it throws a tantrum and runs wild."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/697/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/697/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/357/",
+    "pokedexNumber": 697,
+    "name": "tyrantrum",
+    "species": "Despot Pokémon",
+    "generation": "generation-vi",
+    "color": "red",
+    "type": [
+      "rock",
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 82,
+      "attack": 121,
+      "defense": 119,
+      "specialAttack": 69,
+      "specialDefense": 59,
+      "speed": 71
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "strong-jaw",
+          "url": "https://pokeapi.co/api/v2/ability/173/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "rock-head",
+          "url": "https://pokeapi.co/api/v2/ability/69/"
+        }
+      ]
+    },
+    "height": 25,
+    "weight": 2700,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 45,
+    "baseExperience": 182,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "monster",
+      "dragon"
+    ],
+    "evolvesFrom": {
+      "name": "tyrunt",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/696/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 39 (day)",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 30,
+    "forms": [
+      {
+        "name": "tyrantrum",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/697/"
+      }
+    ],
+    "flavorText": "Thanks to its gargantuan jaws, which could shredthick metal plates as if they were paper, it wasinvincible in the ancient world it once inhabited."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/698/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/698/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/358/",
+    "pokedexNumber": 698,
+    "name": "amaura",
+    "species": "Tundra Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "rock",
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 77,
+      "attack": 59,
+      "defense": 50,
+      "specialAttack": 67,
+      "specialDefense": 63,
+      "speed": 46
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "refrigerate",
+          "url": "https://pokeapi.co/api/v2/ability/174/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "snow-warning",
+          "url": "https://pokeapi.co/api/v2/ability/117/"
+        }
+      ]
+    },
+    "height": 13,
+    "weight": 252,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 45,
+    "baseExperience": 72,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "monster"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "aurorus"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 30,
+    "forms": [
+      {
+        "name": "amaura",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/698/"
+      }
+    ],
+    "flavorText": "This ancient Pokémon was restoredfrom part of its body that had beenfrozen in ice for over 100 million years."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/699/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/699/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/358/",
+    "pokedexNumber": 699,
+    "name": "aurorus",
+    "species": "Tundra Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "rock",
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 123,
+      "attack": 77,
+      "defense": 72,
+      "specialAttack": 99,
+      "specialDefense": 92,
+      "speed": 58
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "refrigerate",
+          "url": "https://pokeapi.co/api/v2/ability/174/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "snow-warning",
+          "url": "https://pokeapi.co/api/v2/ability/117/"
+        }
+      ]
+    },
+    "height": 27,
+    "weight": 2250,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 45,
+    "baseExperience": 104,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "monster"
+    ],
+    "evolvesFrom": {
+      "name": "amaura",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/698/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 39 (night)",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 30,
+    "forms": [
+      {
+        "name": "aurorus",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/699/"
+      }
+    ],
+    "flavorText": "The diamond-shaped crystals on its bodyexpel air as cold as -240 degrees Fahrenheit,surrounding its enemies and encasing them in ice."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/700/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/700/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/67/",
+    "pokedexNumber": 700,
+    "name": "sylveon",
+    "species": "Intertwining Pokémon",
+    "generation": "generation-vi",
+    "color": "pink",
+    "type": [
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "attack": 65,
+      "defense": 65,
+      "specialAttack": 110,
+      "specialDefense": 130,
+      "speed": 60
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "cute-charm",
+          "url": "https://pokeapi.co/api/v2/ability/56/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "pixilate",
+          "url": "https://pokeapi.co/api/v2/ability/182/"
+        }
+      ]
+    },
+    "height": 10,
+    "weight": 235,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 45,
+    "baseExperience": 184,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground"
+    ],
+    "evolvesFrom": {
+      "name": "eevee",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/133/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "High Affection",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 35,
+    "forms": [
+      {
+        "name": "sylveon",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/700/"
+      }
+    ],
+    "flavorText": "It sends a soothing aura from itsribbonlike feelers to calm fights."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/701/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/701/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/359/",
+    "pokedexNumber": 701,
+    "name": "hawlucha",
+    "species": "Wrestling Pokémon",
+    "generation": "generation-vi",
+    "color": "green",
+    "type": [
+      "fighting",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 78,
+      "attack": 92,
+      "defense": 75,
+      "specialAttack": 74,
+      "specialDefense": 63,
+      "speed": 118
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "limber",
+          "url": "https://pokeapi.co/api/v2/ability/7/"
+        },
+        {
+          "name": "unburden",
+          "url": "https://pokeapi.co/api/v2/ability/84/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "mold-breaker",
+          "url": "https://pokeapi.co/api/v2/ability/104/"
+        }
+      ]
+    },
+    "height": 8,
+    "weight": 215,
+    "primaryHabitat": "Unknown",
+    "shape": "humanoid",
+    "captureRate": 100,
+    "baseExperience": 175,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "flying",
+      "humanshape"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "hawlucha",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/701/"
+      }
+    ],
+    "flavorText": "Although its body is small, its proficientfighting skills enable it to keep up withbig bruisers like Machamp and Hariyama."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/702/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/702/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/360/",
+    "pokedexNumber": 702,
+    "name": "dedenne",
+    "species": "Antenna Pokémon",
+    "generation": "generation-vi",
+    "color": "yellow",
+    "type": [
+      "electric",
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 67,
+      "attack": 58,
+      "defense": 57,
+      "specialAttack": 81,
+      "specialDefense": 67,
+      "speed": 101
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "cheek-pouch",
+          "url": "https://pokeapi.co/api/v2/ability/167/"
+        },
+        {
+          "name": "pickup",
+          "url": "https://pokeapi.co/api/v2/ability/53/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "plus",
+          "url": "https://pokeapi.co/api/v2/ability/57/"
+        }
+      ]
+    },
+    "height": 2,
+    "weight": 22,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 180,
+    "baseExperience": 151,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "ground",
+      "fairy"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "dedenne",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/702/"
+      }
+    ],
+    "flavorText": "Its whiskers serve as antennas. By sending andreceiving electrical waves, it can communicatewith others over vast distances."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/703/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/703/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/361/",
+    "pokedexNumber": 703,
+    "name": "carbink",
+    "species": "Jewel Pokémon",
+    "generation": "generation-vi",
+    "color": "gray",
+    "type": [
+      "rock",
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "attack": 50,
+      "defense": 150,
+      "specialAttack": 50,
+      "specialDefense": 150,
+      "speed": 50
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "clear-body",
+          "url": "https://pokeapi.co/api/v2/ability/29/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "sturdy",
+          "url": "https://pokeapi.co/api/v2/ability/5/"
+        }
+      ]
+    },
+    "height": 3,
+    "weight": 57,
+    "primaryHabitat": "Unknown",
+    "shape": "ball",
+    "captureRate": 60,
+    "baseExperience": 100,
+    "baseHappiness": 70,
+    "growthRate": "slow",
+    "eggGroups": [
+      "fairy",
+      "mineral"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 25,
+    "forms": [
+      {
+        "name": "carbink",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/703/"
+      }
+    ],
+    "flavorText": "Born from the temperatures and pressuresdeep underground, it fires beams from thestone in its head."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/704/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/704/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/362/",
+    "pokedexNumber": 704,
+    "name": "goomy",
+    "species": "Soft Tissue Pokémon",
+    "generation": "generation-vi",
+    "color": "purple",
+    "type": [
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 45,
+      "attack": 50,
+      "defense": 35,
+      "specialAttack": 55,
+      "specialDefense": 75,
+      "speed": 40
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "sap-sipper",
+          "url": "https://pokeapi.co/api/v2/ability/157/"
+        },
+        {
+          "name": "hydration",
+          "url": "https://pokeapi.co/api/v2/ability/93/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "gooey",
+          "url": "https://pokeapi.co/api/v2/ability/183/"
+        }
+      ]
+    },
+    "height": 3,
+    "weight": 28,
+    "primaryHabitat": "Unknown",
+    "shape": "squiggle",
+    "captureRate": 45,
+    "baseExperience": 60,
+    "baseHappiness": 35,
+    "growthRate": "slow",
+    "eggGroups": [
+      "dragon"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "sliggoo"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 40,
+    "forms": [
+      {
+        "name": "goomy",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/704/"
+      }
+    ],
+    "flavorText": "The weakest Dragon-type Pokémon,it lives in damp, shady places, so itsbody doesn’t dry out."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/705/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/705/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/362/",
+    "pokedexNumber": 705,
+    "name": "sliggoo",
+    "species": "Soft Tissue Pokémon",
+    "generation": "generation-vi",
+    "color": "purple",
+    "type": [
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 68,
+      "attack": 75,
+      "defense": 53,
+      "specialAttack": 83,
+      "specialDefense": 113,
+      "speed": 60
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "sap-sipper",
+          "url": "https://pokeapi.co/api/v2/ability/157/"
+        },
+        {
+          "name": "hydration",
+          "url": "https://pokeapi.co/api/v2/ability/93/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "gooey",
+          "url": "https://pokeapi.co/api/v2/ability/183/"
+        }
+      ]
+    },
+    "height": 8,
+    "weight": 175,
+    "primaryHabitat": "Unknown",
+    "shape": "squiggle",
+    "captureRate": 45,
+    "baseExperience": 158,
+    "baseHappiness": 35,
+    "growthRate": "slow",
+    "eggGroups": [
+      "dragon"
+    ],
+    "evolvesFrom": {
+      "name": "goomy",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/704/"
+    },
+    "evolvesTo": [
+      "goodra"
+    ],
+    "evolutionTrigger": "Level 40",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 40,
+    "forms": [
+      {
+        "name": "sliggoo",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/705/"
+      }
+    ],
+    "flavorText": "It drives away opponents by excreting asticky liquid that can dissolve anything.Its eyes devolved, so it can’t see anything."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/706/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/706/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/362/",
+    "pokedexNumber": 706,
+    "name": "goodra",
+    "species": "Dragon Pokémon",
+    "generation": "generation-vi",
+    "color": "purple",
+    "type": [
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 90,
+      "attack": 100,
+      "defense": 70,
+      "specialAttack": 110,
+      "specialDefense": 150,
+      "speed": 80
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "sap-sipper",
+          "url": "https://pokeapi.co/api/v2/ability/157/"
+        },
+        {
+          "name": "hydration",
+          "url": "https://pokeapi.co/api/v2/ability/93/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "gooey",
+          "url": "https://pokeapi.co/api/v2/ability/183/"
+        }
+      ]
+    },
+    "height": 20,
+    "weight": 1505,
+    "primaryHabitat": "Unknown",
+    "shape": "upright",
+    "captureRate": 45,
+    "baseExperience": 270,
+    "baseHappiness": 35,
+    "growthRate": "slow",
+    "eggGroups": [
+      "dragon"
+    ],
+    "evolvesFrom": {
+      "name": "sliggoo",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/705/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 50",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 40,
+    "forms": [
+      {
+        "name": "goodra",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/706/"
+      }
+    ],
+    "flavorText": "This very friendly Dragon-type Pokémonwill hug its beloved Trainer, leavingthat Trainer covered in sticky slime."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/707/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/707/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/363/",
+    "pokedexNumber": 707,
+    "name": "klefki",
+    "species": "Key Ring Pokémon",
+    "generation": "generation-vi",
+    "color": "gray",
+    "type": [
+      "steel",
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 57,
+      "attack": 80,
+      "defense": 91,
+      "specialAttack": 80,
+      "specialDefense": 87,
+      "speed": 75
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "prankster",
+          "url": "https://pokeapi.co/api/v2/ability/158/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "magician",
+          "url": "https://pokeapi.co/api/v2/ability/170/"
+        }
+      ]
+    },
+    "height": 2,
+    "weight": 30,
+    "primaryHabitat": "Unknown",
+    "shape": "ball",
+    "captureRate": 75,
+    "baseExperience": 165,
+    "baseHappiness": 70,
+    "growthRate": "fast",
+    "eggGroups": [
+      "mineral"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "klefki",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/707/"
+      }
+    ],
+    "flavorText": "These key collectors threaten any attackersby fiercely jingling their keys at them."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/708/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/708/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/364/",
+    "pokedexNumber": 708,
+    "name": "phantump",
+    "species": "Stump Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "ghost",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 43,
+      "attack": 70,
+      "defense": 48,
+      "specialAttack": 50,
+      "specialDefense": 60,
+      "speed": 38
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "natural-cure",
+          "url": "https://pokeapi.co/api/v2/ability/30/"
+        },
+        {
+          "name": "frisk",
+          "url": "https://pokeapi.co/api/v2/ability/119/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "harvest",
+          "url": "https://pokeapi.co/api/v2/ability/139/"
+        }
+      ]
+    },
+    "height": 4,
+    "weight": 70,
+    "primaryHabitat": "Unknown",
+    "shape": "arms",
+    "captureRate": 120,
+    "baseExperience": 62,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "plant",
+      "indeterminate"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "trevenant"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "phantump",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/708/"
+      }
+    ],
+    "flavorText": "These Pokémon are created whenspirits possess rotten tree stumps.They prefer to live in abandoned forests."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/709/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/709/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/364/",
+    "pokedexNumber": 709,
+    "name": "trevenant",
+    "species": "Elder Tree Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "ghost",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "attack": 110,
+      "defense": 76,
+      "specialAttack": 65,
+      "specialDefense": 82,
+      "speed": 56
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "natural-cure",
+          "url": "https://pokeapi.co/api/v2/ability/30/"
+        },
+        {
+          "name": "frisk",
+          "url": "https://pokeapi.co/api/v2/ability/119/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "harvest",
+          "url": "https://pokeapi.co/api/v2/ability/139/"
+        }
+      ]
+    },
+    "height": 15,
+    "weight": 710,
+    "primaryHabitat": "Unknown",
+    "shape": "tentacles",
+    "captureRate": 60,
+    "baseExperience": 166,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "plant",
+      "indeterminate"
+    ],
+    "evolvesFrom": {
+      "name": "phantump",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/708/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Trade",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "trevenant",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/709/"
+      }
+    ],
+    "flavorText": "It can control trees at will. It will trap peoplewho harm the forest, so they can never leave."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/710/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/710/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/365/",
+    "pokedexNumber": 710,
+    "name": "pumpkaboo-average",
+    "species": "Pumpkin Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "ghost",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 49,
+      "attack": 66,
+      "defense": 70,
+      "specialAttack": 44,
+      "specialDefense": 55,
+      "speed": 51
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "pickup",
+          "url": "https://pokeapi.co/api/v2/ability/53/"
+        },
+        {
+          "name": "frisk",
+          "url": "https://pokeapi.co/api/v2/ability/119/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "insomnia",
+          "url": "https://pokeapi.co/api/v2/ability/15/"
+        }
+      ]
+    },
+    "height": 4,
+    "weight": 50,
+    "primaryHabitat": "Unknown",
+    "shape": "ball",
+    "captureRate": 120,
+    "baseExperience": 67,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "indeterminate"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "pumpkaboo-average",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/710/"
+      }
+    ],
+    "flavorText": "The pumpkin body is inhabited by a spirittrapped in this world. As the sun sets,it becomes restless and active."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/711/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/711/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/365/",
+    "pokedexNumber": 711,
+    "name": "gourgeist-average",
+    "species": "Pumpkin Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "ghost",
+      "grass"
+    ],
+    "baseStats": {
+      "hp": 65,
+      "attack": 90,
+      "defense": 122,
+      "specialAttack": 58,
+      "specialDefense": 75,
+      "speed": 84
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "pickup",
+          "url": "https://pokeapi.co/api/v2/ability/53/"
+        },
+        {
+          "name": "frisk",
+          "url": "https://pokeapi.co/api/v2/ability/119/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "insomnia",
+          "url": "https://pokeapi.co/api/v2/ability/15/"
+        }
+      ]
+    },
+    "height": 9,
+    "weight": 125,
+    "primaryHabitat": "Unknown",
+    "shape": "blob",
+    "captureRate": 60,
+    "baseExperience": 173,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "indeterminate"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "gourgeist-average",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/711/"
+      }
+    ],
+    "flavorText": "Singing in eerie voices, they wandertown streets on the night of the new moon.Anyone who hears their song is cursed."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/712/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/712/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/366/",
+    "pokedexNumber": 712,
+    "name": "bergmite",
+    "species": "Ice Chunk Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "attack": 69,
+      "defense": 85,
+      "specialAttack": 32,
+      "specialDefense": 35,
+      "speed": 28
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "own-tempo",
+          "url": "https://pokeapi.co/api/v2/ability/20/"
+        },
+        {
+          "name": "ice-body",
+          "url": "https://pokeapi.co/api/v2/ability/115/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "sturdy",
+          "url": "https://pokeapi.co/api/v2/ability/5/"
+        }
+      ]
+    },
+    "height": 10,
+    "weight": 995,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 190,
+    "baseExperience": 61,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "monster",
+      "mineral"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "avalugg"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "bergmite",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/712/"
+      }
+    ],
+    "flavorText": "It blocks opponents’ attacks with theice that shields its body. It uses cold airto repair any cracks with new ice."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/713/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/713/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/366/",
+    "pokedexNumber": 713,
+    "name": "avalugg",
+    "species": "Iceberg Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "ice"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "attack": 117,
+      "defense": 184,
+      "specialAttack": 44,
+      "specialDefense": 46,
+      "speed": 28
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "own-tempo",
+          "url": "https://pokeapi.co/api/v2/ability/20/"
+        },
+        {
+          "name": "ice-body",
+          "url": "https://pokeapi.co/api/v2/ability/115/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "sturdy",
+          "url": "https://pokeapi.co/api/v2/ability/5/"
+        }
+      ]
+    },
+    "height": 20,
+    "weight": 5050,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 55,
+    "baseExperience": 180,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "monster",
+      "mineral"
+    ],
+    "evolvesFrom": {
+      "name": "bergmite",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/712/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 37",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "avalugg",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/713/"
+      }
+    ],
+    "flavorText": "Its ice-covered body is as hard as steel.Its cumbersome frame crushes anything thatstands in its way."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/714/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/714/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/367/",
+    "pokedexNumber": 714,
+    "name": "noibat",
+    "species": "Sound Wave Pokémon",
+    "generation": "generation-vi",
+    "color": "purple",
+    "type": [
+      "flying",
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "attack": 30,
+      "defense": 35,
+      "specialAttack": 45,
+      "specialDefense": 40,
+      "speed": 55
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "frisk",
+          "url": "https://pokeapi.co/api/v2/ability/119/"
+        },
+        {
+          "name": "infiltrator",
+          "url": "https://pokeapi.co/api/v2/ability/151/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "telepathy",
+          "url": "https://pokeapi.co/api/v2/ability/140/"
+        }
+      ]
+    },
+    "height": 5,
+    "weight": 80,
+    "primaryHabitat": "Unknown",
+    "shape": "wings",
+    "captureRate": 190,
+    "baseExperience": 49,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "flying",
+      "dragon"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "noivern"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": false,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "noibat",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/714/"
+      }
+    ],
+    "flavorText": "They live in pitch-black caves. Their enormous earscan emit ultrasonic waves of 200,000 hertz."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/715/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/715/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/367/",
+    "pokedexNumber": 715,
+    "name": "noivern",
+    "species": "Sound Wave Pokémon",
+    "generation": "generation-vi",
+    "color": "purple",
+    "type": [
+      "flying",
+      "dragon"
+    ],
+    "baseStats": {
+      "hp": 85,
+      "attack": 70,
+      "defense": 80,
+      "specialAttack": 97,
+      "specialDefense": 80,
+      "speed": 123
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "frisk",
+          "url": "https://pokeapi.co/api/v2/ability/119/"
+        },
+        {
+          "name": "infiltrator",
+          "url": "https://pokeapi.co/api/v2/ability/151/"
+        }
+      ],
+      "hidden": [
+        {
+          "name": "telepathy",
+          "url": "https://pokeapi.co/api/v2/ability/140/"
+        }
+      ]
+    },
+    "height": 15,
+    "weight": 850,
+    "primaryHabitat": "Unknown",
+    "shape": "wings",
+    "captureRate": 45,
+    "baseExperience": 187,
+    "baseHappiness": 70,
+    "growthRate": "medium",
+    "eggGroups": [
+      "flying",
+      "dragon"
+    ],
+    "evolvesFrom": {
+      "name": "noibat",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/714/"
+    },
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "Level 48",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 20,
+    "forms": [
+      {
+        "name": "noivern",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/715/"
+      }
+    ],
+    "flavorText": "They fly around on moonless nightsand attack careless prey. Nothing canbeat them in a battle in the dark."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/716/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/716/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/368/",
+    "pokedexNumber": 716,
+    "name": "xerneas",
+    "species": "Life Pokémon",
+    "generation": "generation-vi",
+    "color": "blue",
+    "type": [
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 126,
+      "attack": 131,
+      "defense": 95,
+      "specialAttack": 131,
+      "specialDefense": 98,
+      "speed": 99
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "fairy-aura",
+          "url": "https://pokeapi.co/api/v2/ability/187/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 30,
+    "weight": 2150,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 45,
+    "baseExperience": 306,
+    "baseHappiness": 0,
+    "growthRate": "slow",
+    "eggGroups": [
+      "no-eggs"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": true,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 120,
+    "forms": [
+      {
+        "name": "xerneas-active",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/716/"
+      },
+      {
+        "name": "xerneas-neutral",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/10132/"
+      }
+    ],
+    "flavorText": "Legends say it can share eternal life.It slept for a thousand years in the formof a tree before its revival."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/717/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/717/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/369/",
+    "pokedexNumber": 717,
+    "name": "yveltal",
+    "species": "Destruction Pokémon",
+    "generation": "generation-vi",
+    "color": "red",
+    "type": [
+      "dark",
+      "flying"
+    ],
+    "baseStats": {
+      "hp": 126,
+      "attack": 131,
+      "defense": 95,
+      "specialAttack": 131,
+      "specialDefense": 98,
+      "speed": 99
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "dark-aura",
+          "url": "https://pokeapi.co/api/v2/ability/186/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 58,
+    "weight": 2030,
+    "primaryHabitat": "Unknown",
+    "shape": "wings",
+    "captureRate": 45,
+    "baseExperience": 306,
+    "baseHappiness": 0,
+    "growthRate": "slow",
+    "eggGroups": [
+      "no-eggs"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": true,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 120,
+    "forms": [
+      {
+        "name": "yveltal",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/717/"
+      }
+    ],
+    "flavorText": "When this legendary Pokémon’s wings andtail feathers spread wide and glow red,it absorbs the life force of living creatures."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/718/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/718/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/370/",
+    "pokedexNumber": 718,
+    "name": "zygarde-50",
+    "species": "Order Pokémon",
+    "generation": "generation-vi",
+    "color": "green",
+    "type": [
+      "dragon",
+      "ground"
+    ],
+    "baseStats": {
+      "hp": 108,
+      "attack": 100,
+      "defense": 121,
+      "specialAttack": 81,
+      "specialDefense": 95,
+      "speed": 95
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "aura-break",
+          "url": "https://pokeapi.co/api/v2/ability/188/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 50,
+    "weight": 3050,
+    "primaryHabitat": "Unknown",
+    "shape": "squiggle",
+    "captureRate": 3,
+    "baseExperience": 270,
+    "baseHappiness": 0,
+    "growthRate": "slow",
+    "eggGroups": [
+      "no-eggs"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": true,
+    "isMythical": false,
+    "isBaby": false,
+    "hatchCounter": 120,
+    "forms": [
+      {
+        "name": "zygarde-50",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/718/"
+      }
+    ],
+    "flavorText": "When the Kalos region’s ecosystem falls intodisarray, it appears and reveals its secret power."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/719/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/719/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/371/",
+    "pokedexNumber": 719,
+    "name": "diancie",
+    "species": "Jewel Pokémon",
+    "generation": "generation-vi",
+    "color": "pink",
+    "type": [
+      "rock",
+      "fairy"
+    ],
+    "baseStats": {
+      "hp": 50,
+      "attack": 100,
+      "defense": 150,
+      "specialAttack": 100,
+      "specialDefense": 150,
+      "speed": 50
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "clear-body",
+          "url": "https://pokeapi.co/api/v2/ability/29/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 7,
+    "weight": 88,
+    "primaryHabitat": "Unknown",
+    "shape": "arms",
+    "captureRate": 3,
+    "baseExperience": 270,
+    "baseHappiness": 70,
+    "growthRate": "slow",
+    "eggGroups": [
+      "no-eggs"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": true,
+    "isBaby": false,
+    "hatchCounter": 25,
+    "forms": [
+      {
+        "name": "diancie",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/719/"
+      }
+    ],
+    "flavorText": "A sudden transformation of Carbink,its pink, glimmering body is said to bethe loveliest sight in the whole world."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/720/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/720/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/372/",
+    "pokedexNumber": 720,
+    "name": "hoopa",
+    "species": "Mischief Pokémon",
+    "generation": "generation-vi",
+    "color": "purple",
+    "type": [
+      "psychic",
+      "ghost"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "attack": 110,
+      "defense": 60,
+      "specialAttack": 150,
+      "specialDefense": 130,
+      "speed": 70
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "magician",
+          "url": "https://pokeapi.co/api/v2/ability/170/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 5,
+    "weight": 90,
+    "primaryHabitat": "Unknown",
+    "shape": "arms",
+    "captureRate": 3,
+    "baseExperience": 270,
+    "baseHappiness": 100,
+    "growthRate": "slow",
+    "eggGroups": [
+      "no-eggs"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": true,
+    "isBaby": false,
+    "hatchCounter": 120,
+    "forms": [
+      {
+        "name": "hoopa",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/720/"
+      }
+    ],
+    "flavorText": "This troublemaker sends anythingand everything to faraway placesusing its loop, which can warp space."
+  },
+  {
+    "baseUrl": "https://pokeapi.co/api/v2/pokemon/721/",
+    "speciesUrl": "https://pokeapi.co/api/v2/pokemon-species/721/",
+    "evolutionChainUrl": "https://pokeapi.co/api/v2/evolution-chain/373/",
+    "pokedexNumber": 721,
+    "name": "volcanion",
+    "species": "Steam Pokémon",
+    "generation": "generation-vi",
+    "color": "brown",
+    "type": [
+      "fire",
+      "water"
+    ],
+    "baseStats": {
+      "hp": 80,
+      "attack": 110,
+      "defense": 120,
+      "specialAttack": 130,
+      "specialDefense": 90,
+      "speed": 70
+    },
+    "abilities": {
+      "normal": [
+        {
+          "name": "water-absorb",
+          "url": "https://pokeapi.co/api/v2/ability/11/"
+        }
+      ],
+      "hidden": []
+    },
+    "height": 17,
+    "weight": 1950,
+    "primaryHabitat": "Unknown",
+    "shape": "quadruped",
+    "captureRate": 3,
+    "baseExperience": 270,
+    "baseHappiness": 100,
+    "growthRate": "slow",
+    "eggGroups": [
+      "no-eggs"
+    ],
+    "evolvesFrom": null,
+    "evolvesTo": [
+      "None"
+    ],
+    "evolutionTrigger": "None",
+    "isFinalEvolution": true,
+    "isLegendary": false,
+    "isMythical": true,
+    "isBaby": false,
+    "hatchCounter": 120,
+    "forms": [
+      {
+        "name": "volcanion",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/721/"
+      }
+    ],
+    "flavorText": "It lets out billows of steam and disappears intothe dense fog. It’s said to live in mountainswhere humans do not tread."
+  }
+]
