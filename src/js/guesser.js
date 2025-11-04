@@ -19,6 +19,11 @@ function parseURLParams() {
 
     console.log('Selected Types from URL:', selectedTypes);
     console.log('Selected Generations from URL:', selectedGens);
+
+    if(!selectedTypes.length || !selectedGens.length) {
+        console.log("Invalid URL Parameters, returning to home page!");
+        window.location.href = "index.html"
+    }
 }
 
 function filterPokemonByTypes(pokemonList, selectedTypes){
