@@ -19,6 +19,8 @@
 body{
     all: unset;
     font-family: var(--primary-font);
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Background container */
@@ -50,6 +52,6 @@ body{
         transform: translate(-14.2857%, 0);
     }
     100% {
-        transform: translate(0, -10%);
+        transform: translate(0, -5.5555%);
     }
 }

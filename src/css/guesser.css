@@ -39,3 +39,19 @@ main {
   width: 10%;
   align-self: center;
 }
+
+.background-box {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: solid black 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.background-box h1 {
+  margin: 0;
+}
