@@ -37,13 +37,16 @@ body{
 
 /* Sliding background */
 .sliding-background {
-    min-width: 120vw;
-    min-height: 110vh;
-    position: absolute;
     animation-name: background-slide;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+#sliding-background {
+    min-width: 120vw;
+    min-height: 110vh;
+    position: absolute;
 }
 
 /* Animation for sliding background */

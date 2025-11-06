@@ -80,9 +80,7 @@ function setHeader() {
     });
 }
 
-
 function setFooter() {
     document.getElementsByTagName('footer')[0].innerHTML = `
-    
     `;
 }
