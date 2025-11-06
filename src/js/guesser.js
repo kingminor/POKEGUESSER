@@ -4,6 +4,9 @@ import {loadSelectedGenerations} from "./loader.js";
 const pokemonSilhouette = document.querySelector("#silhouette");
 const input = document.querySelector("#pokemon-input");
 const datalist = document.querySelector("#pokemon-list");
+const form = document.querySelector("#guess-form");
+const congratsDialog = document.querySelector("#congrats-dialog");
+let hintsUsed = 0;
 
 let selectedGens = [];
 let selectedTypes = [];
@@ -68,4 +71,38 @@ input.addEventListener("input", () => {
         option.value = pokemon.name; // use name property
         datalist.appendChild(option);
     });
+});
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    console.log(e);
+
+    const guess = e.target[0].value.trim().toLowerCase();
+
+    if (guess === selectedPokemon.name.toLowerCase()){
+        congratsDialog.innerHTML = `
+            <h2>You Got It!</h2>
+            <h3>It Was ${selectedPokemon.name}</h3>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedPokemon.pokedexNumber}.png" alt="${selectedPokemon.name}">
+            <button id="play-again">Play Again?</button>`;
+
+            congratsDialog.show();
+
+            const restartGame = () => {
+                congratsDialog.close();
+                window.location.reload();
+            };
+
+            congratsDialog.querySelector("#play-again").addEventListener("click", restartGame)
+
+            congratsDialog.addEventListener("keydown", (e) => {
+                if(e.key === "Enter"){
+                    restartGame();
+                }
+            })
+    }
+    else {
+        
+    }
 });

@@ -2,3 +2,11 @@
 - Type Secetion (opt out)
 - Pokedex number (int range)
 - Other Special (Mega, Legend, Mythic, Ultra beast, Vmax) // Stetch. Do later with more advanced parser.
+
+Things to use as hints!
+- height/weight
+- color
+- generation
+- type
+- flavor text
+- pokedex number
