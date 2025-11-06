@@ -1,10 +1,6 @@
 
 @import url('./global.css');
 
-body {
-    margin: 0;
-}
-
 #game-settings {
     background-color: #fff;
     padding: 20px;
@@ -16,13 +12,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-main {
-    margin-top: 20px;
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
 }
 
 summary {
@@ -46,21 +35,7 @@ details > div > div {
 }
 
 button {
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 18px;
-    width: fit-content;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: none;
-    border-radius: 100px;
-    font-family: var(--primary-font);
     margin: 0 auto;
-}
-
-button:hover {
-    cursor: pointer;
 }
 
 .toggle-div {

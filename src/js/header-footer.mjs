@@ -82,5 +82,6 @@ function setHeader() {
 
 function setFooter() {
     document.getElementsByTagName('footer')[0].innerHTML = `
+        <p>This is a student project.</p>
     `;
 }

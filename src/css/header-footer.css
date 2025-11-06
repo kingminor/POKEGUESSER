@@ -1,5 +1,6 @@
 /* Header */
 header {
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +31,7 @@ header {
   height: 100%;
 }
 
-#right-header a {
+#right-header > a {
   padding: 0 20px;
   color: white;
   text-decoration: none;
@@ -40,7 +41,7 @@ header {
   height: 100%;
 }
 
-#right-header a:hover {
+#right-header > a:hover {
   background-color: black;
 }
 
@@ -70,18 +71,34 @@ header {
 
 .dropdown-content {
   display: none;
+  flex-direction: column;
   position: absolute;
   right: 0;
   background-color: var(--secondary-color);
   min-width: 160px;
-  width: 225px;
+  width: 400px;
+}
+
+.dropdown-content > * {
+  width: 100%;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content > *:hover {
+  background-color: black;
 }
 
 .dropdown-content.show {
-  display: block;
+  display: flex;
 }
 
 .switch-container {
+  width: 100%;
   display: flex;
   align-items: center;  /* vertically center text and slider */
   gap: 10px;            /* space between text and slider */
@@ -134,4 +151,16 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(22px);
+}
+
+footer {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  color: white;
+  width: 100vw;
+}
+
+footer > * {
+  margin: 0;
+  padding: 0;
 }

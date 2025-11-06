@@ -13,9 +13,16 @@ main {
     width: 100%;
 }
 
+#guess-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
 #silhouette {
   width: 25%;
-  padding: 5%;
+  padding: 20px;
   align-self: center;
   image-rendering: pixelated;
 }
@@ -36,12 +43,10 @@ main {
 }
 
 #reveal {
-  width: 10%;
   align-self: center;
 }
 
 .background-box {
-  margin-top: 20px;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
