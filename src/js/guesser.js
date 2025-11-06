@@ -36,7 +36,7 @@ function filterPokemonByTypes(pokemonList, selectedTypes){
 GlobalInitialize(); // Initalize from global script
 parseURLParams(); // Parse Param URLS
 availablePokemon = await loadSelectedGenerations(selectedGens); //Loads pokemon based on selected Generations
-availablePokemon = filterPokemonByTypes(availablePokemon, selectedTypes) // Filters By type
+availablePokemon = filterPokemonByTypes(availablePokemon, selectedTypes); // Filters By type
 console.log(availablePokemon);
 if(availablePokemon.length === 0) {
     throw new Error("Pokemon List is Empty, Check URL Params!")
