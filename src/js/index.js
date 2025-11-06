@@ -2,32 +2,42 @@ import { GlobalInitialize } from "./global.js";
 
 GlobalInitialize();
 
-function typeTemplate(elementId, list) {
+function typeTemplate(elementId, list, isChecked=true) {
   const element = document.getElementById(elementId);
+  element.innerHTML = '';
   let attributeText = '';
   for (let i = 0; i < list.length; i ++) {
     attributeText = list[i].toLowerCase();
     attributeText = attributeText.replace(/\s/g, '');
+    let checkedStatus = '';
+    if (isChecked) {
+      checkedStatus = ' checked';
+    }
     element.insertAdjacentHTML('beforeend', `
       <div>
         <label for="${attributeText}">${list[i]}</label>
-        <input id="${attributeText}" type="checkbox" checked>
+        <input id="${attributeText}" type="checkbox"${checkedStatus}>
       </div>
     `);
   }
   console.log("Loaded Types");
 }
 
-function genTemplate(elementId, list){
+function genTemplate(elementId, list, isChecked=true) {
   const element = document.getElementById(elementId);
+  element.innerHTML = '';
   let attributeText = '';
   for (let i = 0; i < list.length; i ++) {
     attributeText = list[i].toLowerCase();
     attributeText = attributeText.replace(/\s/g, '');
+    let checkedStatus = '';
+    if (isChecked) {
+      checkedStatus = ' checked';
+    }
     element.insertAdjacentHTML('beforeend', `
       <div>
         <label for="${attributeText}">Gen ${list[i]}</label>
-        <input id="${attributeText}" type="checkbox" checked>
+        <input id="${attributeText}" type="checkbox"${checkedStatus}>
       </div>
     `);
   }
@@ -39,7 +49,6 @@ function getSelectedOptions(containerId) {
   const checkedInputs = container.querySelectorAll('input[type="checkbox"]:checked');
   return Array.from(checkedInputs).map(input => input.id);
 }
-
 
 // --- Gets All 1025 Pokemon Data (Old Functionality)
 // const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0");
@@ -89,6 +98,16 @@ const generations = [
 typeTemplate('type-grid', types);
 genTemplate('gen-grid', generations);
 
+document.getElementById('gen-toggle').addEventListener('click', (e) => {
+  let checkedStatus = e.target.checked;
+  genTemplate('gen-grid', generations, checkedStatus);
+});
+
+document.getElementById('type-toggle').addEventListener('click', (e) => {
+  let checkedStatus = e.target.checked;
+  typeTemplate('type-grid', types, checkedStatus);
+});
+
 document.querySelector("#game-settings").addEventListener('submit', (event) => {
   event.preventDefault();
 
@@ -120,4 +139,4 @@ document.querySelector("#game-settings").addEventListener('submit', (event) => {
   const url = `guesser.html?${params.toString()}`;
   window.location.href = url;
 
-})
+});

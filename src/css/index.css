@@ -33,8 +33,7 @@ summary:hover {
     cursor: pointer;
 }
 
-details > div {
-    padding: 20px;
+#gen-grid, #type-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -62,4 +61,9 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+.toggle-div {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
