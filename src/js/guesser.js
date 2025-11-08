@@ -36,6 +36,7 @@ function filterPokemonByTypes(pokemonList, selectedTypes){
 }
 
 //The code that gets run
+input.focus();
 GlobalInitialize(); // Initalize from global script
 parseURLParams(); // Parse Param URLS
 availablePokemon = await loadSelectedGenerations(selectedGens); //Loads pokemon based on selected Generations
@@ -82,12 +83,15 @@ form.addEventListener('submit', (e) => {
 
     if (guess === selectedPokemon.name.toLowerCase()){
         congratsDialog.innerHTML = `
-            <h2>You Got It!</h2>
-            <h3>It Was ${selectedPokemon.name}</h3>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedPokemon.pokedexNumber}.png" alt="${selectedPokemon.name}">
-            <button id="play-again">Play Again?</button>`;
+            <div>
+                <h2>You Got It!</h2>
+                <h3>It Was ${selectedPokemon.name}</h3>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedPokemon.pokedexNumber}.png" alt="${selectedPokemon.name}">
+                <button id="play-again">Next</button>
+            </div>`;
 
             congratsDialog.show();
+            congratsDialog.style.display = 'flex';
 
             const restartGame = () => {
                 congratsDialog.close();
