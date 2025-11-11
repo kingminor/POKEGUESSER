@@ -31,7 +31,7 @@ body{
 
 main {
     width: 100vw;
-    min-height: calc(100vh - 100px);
+    /* min-height: calc(100vh - 100px); */
     height: fit-content;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -39,6 +39,9 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+
+    flex: 1;
+    overflow: auto;
 }
 
 button {
