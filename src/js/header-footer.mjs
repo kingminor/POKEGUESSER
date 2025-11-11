@@ -83,7 +83,7 @@ function setHeader() {
 function setFooter() {
     document.getElementsByTagName('footer')[0].innerHTML = `
         <p>This is a student project.</p>
-        <p>All Pokémon and Pokémon character names are trademarks of Pokemon Company International.</p>
-        <p>© 2025 by Christian Haroldsen & Michael Brightman. All rights reserved.</p>
+        <p>All Pokémon and Pokémon character names are trademarks of The Pokémon Company International.</p>
+        <p>© 2025 Christian Haroldsen & Michael Brightman. All rights reserved.</p>
     `;
 }
