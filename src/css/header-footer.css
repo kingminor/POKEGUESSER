@@ -156,11 +156,12 @@ input:checked + .slider:before {
 footer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   background-color: var(--secondary-color);
   padding: 20px;
   color: white;
   width: 100vw;
+  font-size: small;
 }
 
 footer > * {
