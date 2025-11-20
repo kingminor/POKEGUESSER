@@ -19,7 +19,7 @@ function setHeader() {
                 </button>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="#profile">Profile</a>
-                    <a href="#stats">Stats</a>
+                    <a href="./stats.html">Stats</a>
                     <a href="#contact">Contact</a>
                     <div class="switch-container">
                         <span>Animate Background</span>
