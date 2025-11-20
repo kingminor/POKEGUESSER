@@ -1,12 +1,13 @@
 /* Header */
 header {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--secondary-color);
   color: white;
-  height: 100px;
+  /* height: 100px; */
+  height: 15vh;
   font-size: x-large;
   margin: 0;
 }
@@ -19,8 +20,9 @@ header {
 }
 
 #left-header img {
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
+  height: 15vh;
   object-fit: contain;
 }
 
@@ -60,7 +62,7 @@ header {
 }
 
 .dropbtn img {
-  height: 80px;
+  height: 80%;
   border-radius: 50%;
   object-fit: cover;
 }

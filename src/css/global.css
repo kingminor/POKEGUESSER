@@ -17,6 +17,11 @@
     
 }
 
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 body{
     all: unset;
     font-family: var(--primary-font);
