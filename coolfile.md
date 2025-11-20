@@ -4,9 +4,9 @@
 - Other Special (Mega, Legend, Mythic, Ultra beast, Vmax) // Stetch. Do later with more advanced parser.
 
 Things to use as hints!
-- height/weight
-- color
-- generation
-- type
-- flavor text
-- pokedex number
+- Color
+- Type
+- Generation
+- Height/Weight
+- Flavor Text
+- Pokédex Number

@@ -97,3 +97,22 @@ main {
   align-items: center;
   justify-content: space-between;
 }
+
+/* Wiggle animation */
+@keyframes wiggle {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(-6px); }
+    30% { transform: translateX(6px); }
+    45% { transform: translateX(-6px); }
+    60% { transform: translateX(6px); }
+    75% { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+}
+
+.input-wiggle {
+    animation: wiggle 0.4s ease;
+}
+
+.input-error {
+    background-color: rgba(255, 0, 0, 0.1);
+}

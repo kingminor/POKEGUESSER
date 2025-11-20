@@ -107,6 +107,18 @@ form.addEventListener('submit', (e) => {
             })
     }
     else {
+        // Remove classes to allow re-triggering
+        input.classList.remove("input-wiggle", "input-error");
+        void input.offsetWidth; // force reflow
         
+        // Add error classes
+        input.classList.add("input-wiggle", "input-error");
+
+        // Optional: remove red after a second
+        setTimeout(() => {
+            input.classList.remove("input-error");
+        }, 800);
+
+        return;
     }
 });
