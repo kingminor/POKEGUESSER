@@ -1,4 +1,5 @@
 import { GlobalInitialize } from "./global.js";
+import {weightToKilograms, heightToMeters} from "./converts-and-formaters.js";
 import {loadSelectedGenerations} from "./loader.js";
 
 const pokemonSilhouette = document.querySelector("#silhouette");
@@ -6,6 +7,7 @@ const input = document.querySelector("#pokemon-input");
 const datalist = document.querySelector("#pokemon-list");
 const form = document.querySelector("#guess-form");
 const congratsDialog = document.querySelector("#congrats-dialog");
+const hintButton = document.querySelector("#reveal");
 let hintsUsed = 0;
 
 let selectedGens = [];
@@ -122,3 +124,38 @@ form.addEventListener('submit', (e) => {
         return;
     }
 });
+
+hintButton.addEventListener('click', (e) => {
+    switch (hintsUsed) {
+        case 0:
+            hintButton.insertAdjacentHTML("beforebegin", `<p>This pokemon is primarily ${selectedPokemon.color}.</p>`);
+            break;
+        case 1:
+            if(selectedPokemon.type.length === 1){
+                hintButton.insertAdjacentHTML("beforebegin", `<p>This pokemon is a ${selectedPokemon.type[0]} type.</p>`)
+            }
+            else {
+                hintButton.insertAdjacentHTML("beforebegin", `<p>This pokemon is a ${selectedPokemon.type[0]} and ${selectedPokemon.type[1]} type.</p>`)
+            }
+            break;
+        case 2:
+            hintButton.insertAdjacentHTML("beforebegin", `<p>This pokemon is from ${selectedPokemon.generation.replace("-", " ")}</p>`);
+            break;
+        case 3:
+            let heightInMeters = heightToMeters(selectedPokemon.height);
+            let weightInKilograms = weightToKilograms(selectedPokemon.weight);
+            hintButton.insertAdjacentHTML("beforebegin", `<p>This pokemon is ${weightInKilograms}KG and ${heightInMeters} meters tall.</p>`);
+            break;
+        case 4:
+            hintButton.insertAdjacentHTML("beforebegin", `<p>This pokemon is #${selectedPokemon.pokedexNumber} in the National Dex</p>`);
+            break;
+        case 5:
+            hintButton.insertAdjacentHTML("beforebegin", `<p>One Pokedex Entry Says: ${selectedPokemon.flavorText}</p>`);
+            break;
+        default:
+            alert("No more hints to show!");
+            break;
+    }
+
+    hintsUsed++;
+})
