@@ -90,6 +90,10 @@ button:hover {
     position: absolute;
 }
 
+.hide {
+    visibility: hidden;
+}
+
 /* Animation for sliding background */
 @keyframes background-slide {
     0% {
