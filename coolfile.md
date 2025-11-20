@@ -8,5 +8,5 @@ Things to use as hints!
 - Type
 - Generation
 - Height/Weight
-- Flavor Text
 - Pokédex Number
+- Flavor Text
