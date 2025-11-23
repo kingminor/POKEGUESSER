@@ -6,12 +6,13 @@
     padding: 20px;
     border-radius: 10px;
     border: solid black 1px;
-    width: 100vw;
+    width: 95vw;
     max-width: 500px;
     height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-sizing: border-box;
 }
 
 summary {
