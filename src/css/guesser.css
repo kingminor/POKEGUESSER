@@ -21,7 +21,7 @@ main {
 }
 
 #silhouette {
-  width: 25%;
+  height: 40vh;
   padding: 20px;
   align-self: center;
   image-rendering: pixelated;
