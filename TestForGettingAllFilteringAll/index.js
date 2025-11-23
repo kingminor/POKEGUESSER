@@ -9,7 +9,7 @@ async function getPokemonData() {
 
   pokemonList.map(p => p.name);
 
-  let newPokemonList = pokemonList.slice(905, 1025);
+  let newPokemonList = pokemonList.slice(0, 1025);
   // Actual object output
   allPokemonData = await fetchAllPokemonDetails(newPokemonList);
   console.log(allPokemonData);
@@ -82,7 +82,7 @@ async function fetchAllPokemonDetails(pokemonList) {
         hatchCounter: speciesData.hatch_counter,
         forms: mainData.forms,
         flavorText:
-          speciesData.flavor_text_entries.find((f) => f.language.name === "en")?.flavor_text.replace(/\n|\f/g, "") ||
+          speciesData.flavor_text_entries.find((f) => f.language.name === "en")?.flavor_text.replace(/\n|\f/g, " ") ||
           "",
       };
     })

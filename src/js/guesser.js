@@ -6,9 +6,13 @@ const pokemonSilhouette = document.querySelector("#silhouette");
 const input = document.querySelector("#pokemon-input");
 const datalist = document.querySelector("#pokemon-list");
 const form = document.querySelector("#guess-form");
+const loadingDialog = document.querySelector("#loading-dialog");
+const loadingBar = document.querySelector("#loading-bar");
+const startButton = document.querySelector("#start-button");
 const congratsDialog = document.querySelector("#congrats-dialog");
 const hintButton = document.querySelector("#reveal");
 let hintsUsed = 0;
+let pokemonImage;
 
 let selectedGens = [];
 let selectedTypes = [];
@@ -40,15 +44,37 @@ function filterPokemonByTypes(pokemonList, selectedTypes){
 //The code that gets run
 input.focus();
 GlobalInitialize(); // Initalize from global script
+loadingDialog.show();
 parseURLParams(); // Parse Param URLS
+loadingBar.value = 10;
 availablePokemon = await loadSelectedGenerations(selectedGens); //Loads pokemon based on selected Generations
 availablePokemon = filterPokemonByTypes(availablePokemon, selectedTypes); // Filters By type
+loadingBar.value = 20;
 console.log(availablePokemon);
 if(availablePokemon.length === 0) {
     throw new Error("Pokemon List is Empty, Check URL Params!")
 }
 let selectedPokemon = availablePokemon[Math.floor(Math.random() * availablePokemon.length)] // Selects random pokemon
-pokemonSilhouette.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedPokemon.pokedexNumber}.png`;
+
+loadingBar.value = 33;
+function blobToBase64(blob) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+    });
+}
+
+let response = await fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedPokemon.pokedexNumber}.png`);
+loadingBar.value = 45;
+let blob = await response.blob();
+loadingBar.value = 56;
+pokemonImage = await blobToBase64(blob);
+
+pokemonSilhouette.src = pokemonImage;
+loadingBar.value = 75;
+
 input.addEventListener("input", () => {
     const value = input.value.toLowerCase();
 
@@ -88,7 +114,7 @@ form.addEventListener('submit', (e) => {
             <div>
                 <h2>You Got It!</h2>
                 <h3>It Was ${selectedPokemon.name}</h3>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedPokemon.pokedexNumber}.png" alt="${selectedPokemon.name}">
+                <img src="${pokemonImage}">
                 <button id="play-again">Next</button>
             </div>`;
 
@@ -125,6 +151,8 @@ form.addEventListener('submit', (e) => {
     }
 });
 
+loadingBar.value = 85;
+
 hintButton.addEventListener('click', (e) => {
     switch (hintsUsed) {
         case 0:
@@ -158,4 +186,13 @@ hintButton.addEventListener('click', (e) => {
     }
 
     hintsUsed++;
+});
+
+loadingBar.value = 95;
+
+startButton.addEventListener('click', (e) => {
+    loadingDialog.close();
 })
+
+loadingBar.value = 100;
+startButton.classList.remove("hide");
