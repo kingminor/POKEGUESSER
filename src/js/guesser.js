@@ -75,6 +75,37 @@ pokemonImage = await blobToBase64(blob);
 pokemonSilhouette.src = pokemonImage;
 loadingBar.value = 75;
 
+
+// TIMER FUNCTIONS
+let startTime = 0;
+let elapsedTime = 0;
+let timerInterval;
+
+function startTimer() {
+  startTime = Date.now() - elapsedTime;
+  timerInterval = setInterval(() => {
+    elapsedTime = Date.now() - startTime;
+    displayTime(elapsedTime);
+  }, 10);
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+}
+
+function resetTimer() {
+  clearInterval(timerInterval);
+  elapsedTime = 0;
+  displayTime(0);
+}
+
+function displayTime(ms) {
+  const seconds = Math.floor(ms / 1000);
+  const centiseconds = Math.floor((ms % 1000) / 10); // 1/100th of a second
+  console.log(`${seconds}.${centiseconds.toString().padStart(2, '0')} s`);
+}
+
+
 input.addEventListener("input", () => {
     const value = input.value.toLowerCase();
 
@@ -114,6 +145,7 @@ form.addEventListener('submit', (e) => {
     const guess = e.target[0].value.trim().toLowerCase();
 
     if (guess === selectedPokemon.name.toLowerCase()){
+        stopTimer();
         congratsDialog.innerHTML = `
             <div>
                 <h2>You Got It!</h2>
@@ -126,6 +158,7 @@ form.addEventListener('submit', (e) => {
             congratsDialog.style.display = 'flex';
 
             const restartGame = () => {
+                resetTimer();
                 congratsDialog.close();
                 window.location.reload();
             };
@@ -198,6 +231,8 @@ loadingBar.value = 95;
 function closeLoading() {
     loadingDialog.close();
     input.focus();
+    startTimer();    
+
 }
 
 startButton.addEventListener('click', (e) => {
