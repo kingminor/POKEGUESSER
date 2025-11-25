@@ -105,6 +105,10 @@ input.addEventListener("input", () => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    if (loadingDialog.open) {
+        return;
+    }
+
     console.log(e);
 
     const guess = e.target[0].value.trim().toLowerCase();
@@ -179,6 +183,7 @@ hintButton.addEventListener('click', (e) => {
             break;
         case 5:
             hintButton.insertAdjacentHTML("beforebegin", `<p>One Pokedex Entry Says: ${selectedPokemon.flavorText}</p>`);
+            hintButton.classList.add("hide");
             break;
         default:
             alert("No more hints to show!");
@@ -190,9 +195,22 @@ hintButton.addEventListener('click', (e) => {
 
 loadingBar.value = 95;
 
-startButton.addEventListener('click', (e) => {
+function closeLoading() {
     loadingDialog.close();
+    input.focus();
+}
+
+startButton.addEventListener('click', (e) => {
+    closeLoading();
 })
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && loadingDialog.open) {
+        e.preventDefault();
+        closeLoading();
+    }
+});
+
 
 loadingBar.value = 100;
 startButton.classList.remove("hide");

@@ -126,11 +126,10 @@ main {
 #loading-dialog > div {
   width: fit-content;
   background-color: white;
+  width: 75%;
+  height: 75%;
   padding: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
   border-radius: 10px;
-  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 20px;
