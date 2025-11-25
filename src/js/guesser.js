@@ -96,13 +96,12 @@ function stopTimer() {
 function resetTimer() {
   clearInterval(timerInterval);
   elapsedTime = 0;
-  displayTime(0);
 }
 
-function displayTime(ms) {
+function formatTime(ms) {
   const seconds = Math.floor(ms / 1000);
   const centiseconds = Math.floor((ms % 1000) / 10); // 1/100th of a second
-  console.log(`${seconds}.${centiseconds.toString().padStart(2, '0')} s`);
+  return {seconds, centiseconds};
 }
 
 
@@ -133,6 +132,26 @@ input.addEventListener("input", () => {
     });
 });
 
+function calculateScore(timeElapsed, hintsUsed) {
+    // Hints normalization (0 best, 1 worst)
+    const hintsNorm = hintsUsed / 6;
+
+    // Time decay factor
+    // decayRate tuned for ~5 seconds average
+    const decayRate = 0.00005; // roughly gives ~50% score drop at 5s (500 centiseconds)
+    const timeFactor = Math.exp(-decayRate * timeElapsed);
+
+    // Weighted combination
+    const weightTime = 0.7;
+    const weightHints = 0.3;
+    const combined = weightTime * timeFactor + weightHints * (1 - hintsNorm);
+
+    // Scale to 0-10000
+    const score = Math.round(combined * 100000);
+    return score;
+
+}  
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -146,10 +165,14 @@ form.addEventListener('submit', (e) => {
 
     if (guess === selectedPokemon.name.toLowerCase()){
         stopTimer();
+        let time = formatTime(elapsedTime);
         congratsDialog.innerHTML = `
             <div>
                 <h2>You Got It!</h2>
                 <h3>It Was ${selectedPokemon.name}</h3>
+                <p>Time: ${time.seconds}.${time.centiseconds} Seconds</p>
+                <p>Hints Used: ${hintsUsed}</p>
+                <p>Score: ${calculateScore(elapsedTime, hintsUsed)}</p>
                 <img src="${pokemonImage}">
                 <button id="play-again">Next</button>
             </div>`;
