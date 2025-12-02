@@ -85,7 +85,6 @@ function startTimer() {
   startTime = Date.now() - elapsedTime;
   timerInterval = setInterval(() => {
     elapsedTime = Date.now() - startTime;
-    displayTime(elapsedTime);
   }, 10);
 }
 
@@ -166,13 +165,14 @@ form.addEventListener('submit', (e) => {
     if (guess === selectedPokemon.name.toLowerCase()){
         stopTimer();
         let time = formatTime(elapsedTime);
+        let score = calculateScore(elapsedTime, hintsUsed);
         congratsDialog.innerHTML = `
             <div>
                 <h2>You Got It!</h2>
                 <h3>It Was ${selectedPokemon.name}</h3>
                 <p>Time: ${time.seconds}.${time.centiseconds} Seconds</p>
                 <p>Hints Used: ${hintsUsed}</p>
-                <p>Score: ${calculateScore(elapsedTime, hintsUsed)}</p>
+                <p>Score: ${score}</p>
                 <img src="${pokemonImage}">
                 <button id="play-again">Next</button>
             </div>`;
@@ -180,7 +180,45 @@ form.addEventListener('submit', (e) => {
             congratsDialog.show();
             congratsDialog.style.display = 'flex';
 
-            
+            let scoreStorageString = localStorage.getItem("scoreStorageObject");
+            if (!scoreStorageString) {
+                // If nothing stored yet, create an empty one
+                localStorage.setItem("scoreStorageObject", JSON.stringify({}));
+                scoreStorageString = "{}";
+            }
+            let scoreStorageObject = JSON.parse(scoreStorageString);
+
+            if(scoreStorageObject.hasOwnProperty(`${selectedPokemon.pokedexNumber}`)){
+                if (scoreStorageObject[selectedPokemon.pokedexNumber].score < score) {
+                    scoreStorageObject[selectedPokemon.pokedexNumber] = formatRun();
+                }
+            }
+            else{
+                scoreStorageObject[selectedPokemon.pokedexNumber] = formatRun();
+            }
+
+            localStorage.setItem("scoreStorageObject", JSON.stringify(scoreStorageObject));
+
+
+            function formatRun(){
+                return {
+                    score: score,
+                    time: elapsedTime,
+                    hintsUsed: hintsUsed
+                }
+            }
+
+            // let storedScoreString = localStorage.getItem(`${selectedPokemon.pokedexNumber}score`);
+            // if(storedScoreString === null){
+            //     storeRun();
+            // }
+            // else {
+            //     let storedScoreObject = JSON.parse(storedScoreString);
+
+            //     if(score > storedScoreObject.score){
+            //         storeRun();
+            //     }
+            // }
 
             const restartGame = () => {
 

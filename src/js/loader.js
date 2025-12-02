@@ -1,17 +1,17 @@
 // --- GETS ALL POKEMON, USE loadSelectedGenerations() Instead;
-// export async function loadAllPokemonData() {
-//     try{
-//         let response = await fetch("./data/allpokemon.json");
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! Status: ${response.status}`);
-//         }
-//         return await response.json();
-//     }
-//     catch (error) {
-//         console.error("Failed to load Pokémon data:", error);
-//         return null;
-//     }
-// }
+export async function loadAllPokemonData() { //ONLY USED ON STATS PAGE, USE OTHER FUNCTION FOR EVERYTHING ELSE!!!!!
+    try{
+        let response = await fetch("./data/allpokemon.json");
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return await response.json();
+    }
+    catch (error) {
+        console.error("Failed to load Pokémon data:", error);
+        return null;
+    }
+}
 
 export async function loadSelectedGenerations(selectedGens) {
     const fetchPromises = selectedGens.map(async (gen) => {
