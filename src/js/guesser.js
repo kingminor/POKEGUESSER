@@ -180,13 +180,15 @@ form.addEventListener('submit', (e) => {
             congratsDialog.show();
             congratsDialog.style.display = 'flex';
 
+            
+
             const restartGame = () => {
-                resetTimer();
+
                 congratsDialog.style.display = 'none';
                 window.location.reload();
             };
 
-            congratsDialog.querySelector("#play-again").addEventListener("click", restartGame)
+            congratsDialog.querySelector("#play-again").addEventListener("click", restartGame);
 
             congratsDialog.addEventListener("keydown", (e) => {
                 if(e.key === "Enter"){
