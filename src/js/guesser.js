@@ -155,7 +155,7 @@ function calculateScore(timeElapsed, hintsUsed) {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    if (loadingDialog.open) {
+    if (loadingDialog.style.display == 'flex') {
         return;
     }
 
@@ -182,7 +182,7 @@ form.addEventListener('submit', (e) => {
 
             const restartGame = () => {
                 resetTimer();
-                congratsDialog.close();
+                congratsDialog.style.display = 'none';
                 window.location.reload();
             };
 
@@ -252,10 +252,9 @@ hintButton.addEventListener('click', (e) => {
 loadingBar.value = 95;
 
 function closeLoading() {
-    loadingDialog.close();
+    loadingDialog.style.display = 'none';
     input.focus();
-    startTimer();    
-
+    startTimer();
 }
 
 startButton.addEventListener('click', (e) => {
@@ -263,7 +262,7 @@ startButton.addEventListener('click', (e) => {
 })
 
 document.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && loadingDialog.open) {
+    if (e.key === "Enter" && loadingDialog.style.display == 'flex') {
         e.preventDefault();
         closeLoading();
     }
