@@ -6,11 +6,14 @@ export function setHeaderFooter() {
 
 function setHeader() {
     document.getElementsByTagName('header')[0].innerHTML = `
-        <div id="left-header">
-            <img src="./media/404-not-found.jpg" alt="PokeGuesser Logo">
-            <p>POKÉGUESSER</p>
+        <div id="logo-menu-row">
+            <div id="left-header">
+                <img src="./media/404-not-found.jpg" alt="PokeGuesser Logo">
+                <p>POKÉGUESSER</p>
+            </div>
+            <button id="nav-drop">Menu</button>
         </div>
-        <nav id="right-header">
+        <nav id="right-header" class="closed">
             <a href="index.html">Home</a>
             <a href="leaderboard.html">Leaderboard</a>
             <div class="dropdown">
@@ -32,6 +35,10 @@ function setHeader() {
             </div>
         </nav>
     `;
+
+    document.getElementById('nav-drop').addEventListener('click', ()=> {
+        document.getElementById('right-header').classList.toggle('closed');
+    });
 
     const dropbtn = document.querySelector(".dropbtn");
     const dropdown = document.getElementById("myDropdown");

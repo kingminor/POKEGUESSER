@@ -6,6 +6,7 @@
     /*Light Mode Colors*/
     /*https://coolors.co/006e9d-191923-ffffff-ff1d25*/
     --primary-color:#006E9D;
+    --primary-color-darker:#004b6b;
     --secondary-color:#191923;
     --secondary-color-semi-transparent:#191923dd;
     --header-color:#525252;
@@ -15,6 +16,8 @@
     /*Fonts*/
     --primary-font: 'Russo One', 'Comic Sans MS', sans-serif;
     
+    /* Measurements */
+    --header-height: 80px;
 }
 
 html {
