@@ -1,7 +1,37 @@
+td {
+    color: rgb(69, 69, 69);
+}
 th, td {
+    border: solid black 1px;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+    font-family: "Electrolize";
+}
 
+tr:nth-child(even){background-color: #f0f0f0;}
+
+tr:hover {background-color: #c8c8c8;}
+
+#table{
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+.table-background {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: solid black 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
 .tableImage {
-    height: 100px;
+    height: 80px;
 }

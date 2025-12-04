@@ -45,6 +45,7 @@ function filterPokemonByTypes(pokemonList, selectedTypes){
 input.focus();
 GlobalInitialize(); // Initalize from global script
 loadingDialog.show();
+loadingDialog.style.display = "flex";
 parseURLParams(); // Parse Param URLS
 loadingBar.value = 10;
 availablePokemon = await loadSelectedGenerations(selectedGens); //Loads pokemon based on selected Generations
@@ -301,7 +302,7 @@ startButton.addEventListener('click', (e) => {
     closeLoading();
 })
 
-document.addEventListener("keydown", (e) => {
+document.addEventListener("keypress", (e) => {
     if (e.key === "Enter" && loadingDialog.style.display == 'flex') {
         e.preventDefault();
         closeLoading();
