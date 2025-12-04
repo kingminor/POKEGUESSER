@@ -1,5 +1,5 @@
 import { GlobalInitialize } from "./global.js";
-import {weightToKilograms, heightToMeters} from "./converts-and-formaters.js";
+import {weightToKilograms, heightToMeters, formatTime} from "./converts-and-formaters.js";
 import {loadSelectedGenerations} from "./loader.js";
 
 const pokemonSilhouette = document.querySelector("#silhouette");
@@ -93,18 +93,6 @@ function stopTimer() {
   clearInterval(timerInterval);
 }
 
-function resetTimer() {
-  clearInterval(timerInterval);
-  elapsedTime = 0;
-}
-
-function formatTime(ms) {
-  const seconds = Math.floor(ms / 1000);
-  const centiseconds = Math.floor((ms % 1000) / 10); // 1/100th of a second
-  return {seconds, centiseconds};
-}
-
-
 input.addEventListener("input", () => {
     const value = input.value.toLowerCase();
 
@@ -175,7 +163,8 @@ form.addEventListener('submit', (e) => {
                 <p>Hints Used: ${hintsUsed}</p>
                 <p>Score: ${score}</p>
                 <img src="${pokemonImage}">
-                <button id="play-again">Next</button>
+                <button id="play-again">Play Again</button>
+                <button id="closeCongrats">Close</button>
             </div>`;
 
             congratsDialog.show();
@@ -209,18 +198,6 @@ form.addEventListener('submit', (e) => {
                 }
             }
 
-            // let storedScoreString = localStorage.getItem(`${selectedPokemon.pokedexNumber}score`);
-            // if(storedScoreString === null){
-            //     storeRun();
-            // }
-            // else {
-            //     let storedScoreObject = JSON.parse(storedScoreString);
-
-            //     if(score > storedScoreObject.score){
-            //         storeRun();
-            //     }
-            // }
-
             const restartGame = () => {
 
                 congratsDialog.style.display = 'none';
@@ -233,7 +210,12 @@ form.addEventListener('submit', (e) => {
                 if(e.key === "Enter"){
                     restartGame();
                 }
-            })
+            });
+
+            document.querySelector("#closeCongrats").addEventListener("click", (e) => {
+                congratsDialog.style.display = "none";
+                window.location.href = "index.html";
+            });
     }
     else {
         // Remove classes to allow re-triggering

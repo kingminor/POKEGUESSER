@@ -38,3 +38,9 @@ export function heightToFeetInches(height) {
 
     return { feet, inches };
 }
+
+export function formatTime(ms) {
+  const seconds = Math.floor(ms / 1000);
+  const centiseconds = Math.floor((ms % 1000) / 10); // 1/100th of a second
+  return {seconds, centiseconds};
+}

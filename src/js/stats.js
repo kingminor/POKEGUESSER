@@ -1,5 +1,6 @@
 import { GlobalInitialize } from "./global.js";
 import { loadAllPokemonData } from "./loader.js";
+import { formatTime } from "./converts-and-formaters.js";
 GlobalInitialize();
 
 const tableBody = document.querySelector("#tableBody");
@@ -18,14 +19,16 @@ if (scoreStorageString === null) {
 
     const html = sortedEntries.map(([id, item]) => {
         let currentPokemon = pokemonData[id - 1];
+
+        let time = formatTime(item.time);
         return `
         <tr class="entry">
             <td><img class="tableImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${currentPokemon.pokedexNumber}.png"></td>
             <td>${currentPokemon.name}</td>
-            <td>Dex#: ${id}</td>
-            <td>Score: ${item.score}</td>
-            <td>Time: ${item.time}</td>
-            <td>Hints Used: ${item.hintsUsed}</td>
+            <td>${id}</td>
+            <td>${item.score}</td>
+            <td>${time.seconds}.${time.centiseconds} Seconds</td>
+            <td>${item.hintsUsed}</td>
         </tr>
         `;
     }).join("");
