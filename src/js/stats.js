@@ -2,7 +2,7 @@ import { GlobalInitialize } from "./global.js";
 import { loadAllPokemonData } from "./loader.js";
 GlobalInitialize();
 
-const main = document.querySelector("#main");
+const tableBody = document.querySelector("#tableBody");
 
 let scoreStorageString = localStorage.getItem("scoreStorageObject");
 if (scoreStorageString === null) {
@@ -19,15 +19,16 @@ if (scoreStorageString === null) {
     const html = sortedEntries.map(([id, item]) => {
         let currentPokemon = pokemonData[id - 1];
         return `
-        <div class="entry">
-            <h3>${currentPokemon.name}</h3>
-            <p>Dex#: ${id}</p>
-            <p>Score: ${item.score}</p>
-            <p>Time: ${item.time}</p>
-            <p>Hints Used: ${item.hintsUsed}</p>
-        </div>
+        <tr class="entry">
+            <td><img class="tableImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${currentPokemon.pokedexNumber}.png"></td>
+            <td>${currentPokemon.name}</td>
+            <td>Dex#: ${id}</td>
+            <td>Score: ${item.score}</td>
+            <td>Time: ${item.time}</td>
+            <td>Hints Used: ${item.hintsUsed}</td>
+        </tr>
         `;
     }).join("");
 
-    main.innerHTML = html;
+    tableBody.innerHTML = html;
 }
