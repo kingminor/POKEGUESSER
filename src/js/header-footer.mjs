@@ -7,10 +7,12 @@ export function setHeaderFooter() {
 function setHeader() {
     document.getElementsByTagName('header')[0].innerHTML = `
         <div id="logo-menu-row">
+        <a href="./index.html" class="left-header-link">
             <div id="left-header">
                 <img src="./media/404-not-found.jpg" alt="PokeGuesser Logo">
                 <p>POKÉGUESSER</p>
             </div>
+        </a>
             <button id="nav-drop">Menu</button>
         </div>
         <nav id="right-header" class="closed">

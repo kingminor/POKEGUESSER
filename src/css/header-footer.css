@@ -26,6 +26,11 @@ header {
   object-fit: contain;
 }
 
+.left-header-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Right header */
 #right-header {
   display: flex;
