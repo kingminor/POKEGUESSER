@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokémon With Hyphens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .result {
+      background: white;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pokémon With Hyphens in Their Names</h1>
+  <div id="output">Loading data...</div>
+
+  <script>
+    async function loadPokemon() {
+      const output = document.getElementById("output");
+
+      try {
+        // Fetch your array
+        const response = await fetch("./src/data/allpokemon.json");
+        const pokemonData = await response.json();
+
+        // Filter for entries with hyphens in their names
+        const withHyphens = pokemonData.filter(
+          p => p.name && p.name.includes("-")
+        );
+
+        // Clear loading text
+        output.innerHTML = "";
+
+        if (withHyphens.length === 0) {
+          output.innerHTML = "<p>No Pokémon found with hyphens in their names.</p>";
+          return;
+        }
+
+        // Create a result box for each Pokémon
+        withHyphens.forEach(pokemon => {
+          const div = document.createElement("div");
+          div.classList.add("result");
+
+          div.innerHTML = `
+            <strong>Name:</strong> ${pokemon.name}<br>
+            <strong>Pokédex #:</strong> ${pokemon.pokedexNumber}
+          `;
+
+          output.appendChild(div);
+        });
+
+      } catch (error) {
+        output.innerHTML = "<p>Error loading data. Check console for details.</p>";
+        console.error("Error fetching allpokemon.json:", error);
+      }
+    }
+
+    loadPokemon();
+  </script>
+
+</body>
+</html>

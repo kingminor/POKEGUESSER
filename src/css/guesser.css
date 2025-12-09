@@ -155,3 +155,21 @@ main {
 .input-error {
     background-color: rgba(255, 0, 0, 0.1);
 }
+
+.grow-shrink {
+  background: #4a90e2;
+  display: inline-block;
+  animation: pulseSize 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseSize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

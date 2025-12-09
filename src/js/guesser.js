@@ -294,3 +294,4 @@ document.addEventListener("keypress", (e) => {
 
 loadingBar.value = 100;
 startButton.classList.remove("hide");
+startButton.classList.add("grow-shrink");
