@@ -228,4 +228,24 @@ footer > * {
   header {
     font-size: large;
   }
+
+  .dropbtn {
+    width: 100vw;
+  }
+
+  #myDropdown {
+    width: 100vw;
+  }
+
+  #myDropdown a {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .switch-container {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
 }
