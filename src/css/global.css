@@ -104,6 +104,10 @@ button:hover {
     visibility: hidden;
 }
 
+#contact-us {
+    max-width: 90vw;
+}
+
 /* Animation for sliding background */
 @keyframes background-slide {
     0% {

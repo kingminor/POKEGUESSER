@@ -92,11 +92,12 @@ main {
 }
 
 #congrats-dialog img {
-  height: 300px;
+  height: 30vh;
 }
 
 #congrats-dialog > div {
-  width: fit-content;
+  width: 90vw;
+  max-width: 400px;
   background-color: white;
   padding: 20px;
   padding-left: 50px;
@@ -126,9 +127,11 @@ main {
 #loading-dialog > div {
   width: fit-content;
   background-color: white;
-  width: 75%;
+  width: fit-content;
   height: fit-content;
   padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -160,6 +163,10 @@ main {
   background: #4a90e2;
   display: inline-block;
   animation: pulseSize 2.5s ease-in-out infinite;
+}
+
+#guess-header {
+  text-align: center;
 }
 
 @keyframes pulseSize {

@@ -1,6 +1,7 @@
 td {
     color: rgb(69, 69, 69);
 }
+
 th, td {
     border: solid black 1px;
     border-collapse: collapse;
