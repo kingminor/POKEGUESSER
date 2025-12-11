@@ -145,6 +145,7 @@ main {
   border-radius: 10px;
   border: solid black 1px;
   width: 50%;
+  max-height: fit-content;
 }
 
 /* Wiggle animation */
