@@ -141,6 +141,12 @@ main {
   justify-content: space-between;
 }
 
+#loading-image {
+  border-radius: 10px;
+  border: solid black 1px;
+  width: 50%;
+}
+
 /* Wiggle animation */
 @keyframes wiggle {
     0% { transform: translateX(0); }

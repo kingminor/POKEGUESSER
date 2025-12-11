@@ -11,12 +11,38 @@ const loadingBar = document.querySelector("#loading-bar");
 const startButton = document.querySelector("#start-button");
 const congratsDialog = document.querySelector("#congrats-dialog");
 const hintButton = document.querySelector("#reveal");
+const loadingImage = document.querySelector("#loading-image");
 let hintsUsed = 0;
 let pokemonImage;
 
 let selectedGens = [];
 let selectedTypes = [];
 let availablePokemon = [];
+
+//Sets random image
+const randomImageId = Math.floor(Math.random() * 7);
+switch (randomImageId) {
+    case 0:
+        loadingImage.src = "./media/nyan-pikachu.gif";
+        break;
+    case 1:
+        loadingImage.src = "./media/pikachu-escape.gif";
+        break;
+    case 2:
+        loadingImage.src = "./media/pikachu-ketchup.gif";
+        break;
+    case 3:
+        loadingImage.src = "./media/run-charmander-run.gif";
+        break;
+    case 4:
+        loadingImage.src = "./media/umbreon-sleep.gif";
+        break;
+    case 5:
+        loadingImage.src = "./media/umbreon-y.gif";
+        break;
+    case 6:
+        loadingImage.src = "./media/umbreon.gif";
+}
 
 function parseURLParams() {
     // Get query params from the URL
