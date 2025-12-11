@@ -224,4 +224,8 @@ footer > * {
   #logo-menu-row {
     width: 100vw;
   }
+
+  header {
+    font-size: large;
+  }
 }

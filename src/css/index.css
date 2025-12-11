@@ -43,3 +43,9 @@ button {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+@media screen and (max-width: 700px) {
+    details > div > div {
+        font-size: small;
+    }
+}
