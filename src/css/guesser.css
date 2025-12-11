@@ -125,10 +125,11 @@ main {
 }
 
 #loading-dialog > div {
-  width: fit-content;
   background-color: white;
-  width: fit-content;
-  height: fit-content;
+  /* width: fit-content;
+  height: fit-content; */
+  width: 80vh;
+  height: 80vh;
   padding: 20px;
   padding-left: 50px;
   padding-right: 50px;
